@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 11:32:14 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/19 15:01:45 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/19 15:10:31 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,13 @@ int	main(int argc, char **argv)
 	while(argv[j])
 	{
 		new_upper = argv[j];
-		for (std::string::size_type i=0; i< new_upper.length(); ++i)
-			std::cout << std::toupper(new_upper[i]) << std::endl;
-		std::cout << new_upper << " ";
-		//use fonction toupper and std::cout << for each argv[j] << std::endl
+		while (i < new_upper.length())
+		{
+			std::cout << (char)std::toupper(new_upper[i]);
+			i++;
+		}
+		i = 0;
+		std::cout << " ";
 		j++;
 	}
 	std::cout << std::endl;
