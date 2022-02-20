@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.Classe.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/19 11:32:14 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/20 12:51:57 by bben-yaa         ###   ########.fr       */
+/*   Created: 2022/02/20 14:46:59 by bben-yaa          #+#    #+#             */
+/*   Updated: 2022/02/20 14:49:41 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <ctype.h>
+#include "Contact.Classe.hpp"
 
-int	main(int argc, char **argv)
+Contact::Contact(void)
 {
-	std::string				new_upper;
-	std::string::size_type	i;
-	int						j;
-	
-	j = 1;
-	i = 0;
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	while(argv[j])
-	{
-		new_upper = argv[j];
-		while (i < new_upper.length())
-		{
-			std::cout << (char)std::toupper(new_upper[i]);
-			i++;
-		}
-		i = 0;
-		std::cout << " ";
-		j++;
-	}
-	std::cout << std::endl;
-	return (0);
+	std::cout << "Je suis le construteur Contact" << std::endl;
+	return ;
+}
+
+Contact::~Contact(void)
+{
+	std::cout << "Je suis le destructeur Contact" << std::endl;
+	return ;
 }
