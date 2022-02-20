@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:47:46 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/20 14:49:21 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/20 14:58:35 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 PhoneBook::PhoneBook(void)
 {
-	std::cout << "Je suis le construteur PhoneBook" << std::endl;
+	//std::cout << "Je suis le construteur PhoneBook" << std::endl;
 	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	std::cout << "Je suis le destructeur PhoneBook" << std::endl;
+	//std::cout << "Je suis le destructeur PhoneBook" << std::endl;
 	return ;
 }

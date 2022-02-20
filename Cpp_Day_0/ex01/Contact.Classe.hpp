@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:25:57 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/20 14:52:20 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/20 15:09:17 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 class Contact{
 
 public:
+
+
 
 	Contact(void);
 	~Contact(void);

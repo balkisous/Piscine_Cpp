@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:46:59 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/20 14:49:41 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/20 14:58:17 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 Contact::Contact(void)
 {
-	std::cout << "Je suis le construteur Contact" << std::endl;
+	//std::cout << "Je suis le construteur Contact" << std::endl;
 	return ;
 }
 
 Contact::~Contact(void)
 {
-	std::cout << "Je suis le destructeur Contact" << std::endl;
+	//std::cout << "Je suis le destructeur Contact" << std::endl;
 	return ;
 }

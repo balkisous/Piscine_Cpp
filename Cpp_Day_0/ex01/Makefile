@@ -6,7 +6,7 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/02/20 14:51:33 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/02/20 15:30:25 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRCS 	=	Contact.Classe.cpp \
 			PhoneBook.Classe.cpp \
 			main.cpp \
 
-REPO	= repository
+REPO	= my_repository
 
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
