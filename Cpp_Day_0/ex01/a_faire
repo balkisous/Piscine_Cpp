@@ -1,0 +1,15 @@
+
+
+	1) Mettre toute les variables du contact en private and use setter and getter 
+
+	2) Use getline
+
+	3) Use .lenght pour ne pas laiser les chaines vides
+
+	4) Faire une boucle pour avoir un contact number
+
+	5) Faire search en utilisant des fonctions
+
+	6) Exit fait
+
+	7) Refaire les prints bien

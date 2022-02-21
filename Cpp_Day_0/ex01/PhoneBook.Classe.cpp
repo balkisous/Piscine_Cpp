@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.Classe.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:47:46 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/21 14:05:12 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:51:02 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	PhoneBook::add_first_name(char cmd[120])
 	std::cout << " Enter the first name: ";
 	//	std::cin >> cmd;
 	//	this->contact[this->num_conct].first_name = cmd;
+	//std::cin >> cmd;
 	std::getline (std::cin, this->contact->first_name);
 	std::cout << " len is "<< this->contact[this->num_conct].first_name << std::endl;
 	//if (this->contact[this->num_conct].first_name.length() == 0)

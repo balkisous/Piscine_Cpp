@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.Classe.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:25:57 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/21 10:52:19 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/21 19:45:50 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ public:
 	std::string		darkest_secret;
 	Contact(void);
 	~Contact(void);
+	
+	std::string		get_first_name(void) const;
+	int				set_first_name(std::string first_name);
 
 private:
 
