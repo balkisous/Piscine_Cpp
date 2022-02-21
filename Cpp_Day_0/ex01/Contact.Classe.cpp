@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:46:59 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/20 14:58:17 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/21 12:43:35 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 Contact::Contact(void)
 {
+	this->first_name = "NULL";
+	this->name = "NULL";
+	this->last_name = "NULL";
+	this->phone_number = "NULL";
+	this->darkest_secret = "NULL";
 	//std::cout << "Je suis le construteur Contact" << std::endl;
 	return ;
 }
