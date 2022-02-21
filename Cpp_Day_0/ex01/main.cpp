@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:32:50 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/21 11:10:28 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/21 14:01:35 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ int	main(int argc, char **argv)
 			std::cout << "Enter a command(ADD, SEARCH or EXIT): ";
 			std::cin >> cmd;
 			std::cout << "You type the command " << cmd << std::endl;
-			if (strcmp(cmd, "ADD") == 0)
+			if (strcmp(cmd, "ADD") == 0 || strcmp(cmd, "add") == 0)
 				repo.add_contact(cmd);
-			if (strcmp(cmd, "SEARCH") == 0)
+			if (strcmp(cmd, "SEARCH") == 0 || strcmp(cmd, "search") == 0)
 			{
 				std::cout << "What is the name contact you search" << std::endl;
 			}
-			if (strcmp(cmd, "EXIT") == 0)
+			if (strcmp(cmd, "EXIT") == 0 || strcmp(cmd, "exit") == 0)
 			{
 				std::cout << "Bye! See you next time :)!" << std::endl;
 				break;
