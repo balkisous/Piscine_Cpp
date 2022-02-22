@@ -6,68 +6,90 @@
 /*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 14:47:46 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/21 19:51:02 by balkis           ###   ########.fr       */
+/*   Updated: 2022/02/22 19:43:47 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <string>
 #include "PhoneBook.Classe.hpp"
 #include <cstring>
-#include <string>
 
-PhoneBook::PhoneBook(void) : num_conct(0)
+PhoneBook::PhoneBook(void)
 {
-	//std::cout << "Je suis le construteur PhoneBook" << std::endl;
+	std::cout << "Bonjour, Je suis le construteur PhoneBook" << std::endl;
 	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	//std::cout << "Je suis le destructeur PhoneBook" << std::endl;
+	std::cout << "Au revoir, Je suis le destructeur PhoneBook" << std::endl;
 	return ;
 }
 
-void		PhoneBook::add_contact(char cmd[120])
+void	PhoneBook::search(int num_contact)
 {
-	std::cout << "---Here in phonebook's function add contact---" << std::endl;
-	std::cout << "---------You gonna add a new conctat----------" << std::endl;
-	add_first_name(cmd);
-	return ;
-}
+	int			num_c;
+	std::string	cmd;
 
-void	PhoneBook::add_first_name(char cmd[120])
-{
-	if (this->num_conct >= 8)
+	num_c = 0;
+	std::cout << "    index |first name| last name| nickname " << std::endl;
+	while (num_c < 8)
 	{
-		std::cout << "You already fill all the repo, you gonna overwrite the oldest contact" << std::endl;
-		num_conct = 0;
+		std::cout << "         " << num_c + 1 << "|";
+		this->contact[num_c].display_one();
+		std::cout << std::endl;
+		num_c++;
 	}
-	std::cout << " Enter the first name: ";
-	//	std::cin >> cmd;
-	//	this->contact[this->num_conct].first_name = cmd;
-	//std::cin >> cmd;
-	std::getline (std::cin, this->contact->first_name);
-	std::cout << " len is "<< this->contact[this->num_conct].first_name << std::endl;
-	//if (this->contact[this->num_conct].first_name.length() == 0)
-	//{
-	//	std::cout << "The fields of a saved contact do not can be empty." << std::endl;
-	//	return ;
-	//}
-	std::cout << "The first name of the contact is " << this->contact[PhoneBook::num_conct].first_name << std::endl;
-	add_name(cmd);
-	return ;
+	std::cout << "What contact you search?" << std::endl;
+	std::getline(std::cin, cmd);
+	while (cmd.length() == 0)
+	{
+		std::cout << "Type a number!" << std::endl;
+		std::cout << "What contact you search?" << std::endl;
+		std::getline(std::cin, cmd);
+	}
+	num_c = std::stoi(cmd);
+	if (num_c >= 0 && num_c <= num_contact)
+		this->contact[num_c - 1].display_all();
+	else
+		std::cout << "Wrong number!" << std::endl;
 }
 
-void	PhoneBook::add_name(char cmd[120])
+void	PhoneBook::start_phone(void)
 {
-	std::cout << " Enter the name: ";
-	std::cin >> cmd;
-	if (strcmp(cmd, "\n") == 0)
+	int				num_conct;
+	std::string		cmd;
+	
+	num_conct = 0;
+	std::cout << "Welcome to the cpp PhoneBook!!" << std::endl;
+	while (42)
 	{
-		std::cout << "The fields of a saved contact do not can be empty." << std::endl;
-		return ;
+		std::cout << "Enter a command (ADD, SEARCH or EXIT): ";
+		std::getline(std::cin, cmd);
+		if (cmd == "ADD" || cmd == "add")
+		{
+			if (num_conct == 8)
+			{
+				std::cout << "You're already fill all the contact" << std::endl;
+				std::cout << "The oldest contact replace by the new one" << std::endl;
+				num_conct = 0;
+			}
+			this->contact[num_conct].add_contact();
+			std::cout << "Sucess, You add the contact number " << num_conct + 1 << "!!" << std::endl << std::endl;
+			num_conct++;
+		}	
+		else if (cmd == "SEARCH" || cmd == "search")
+		{
+			std::cout << "What is the name contact you search ?" << std::endl;
+			this->search(num_conct);
+		}
+		else if (cmd == "EXIT" || cmd == "exit")
+		{
+			std::cout << "Bye! See you next time :)!" << std::endl;
+			break;
+		}
+		else
+			std::cout << "!!!!!!You type a wrong command!!!!!!" << std::endl << std::endl;
 	}
-	this->contact[PhoneBook::num_conct].name = cmd;
-	std::cout << "The name of the contact is " << this->contact[PhoneBook::num_conct].name << std::endl;
-	return ;
 }
