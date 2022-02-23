@@ -3,19 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
+#    By: balkis <balkis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/02/23 15:35:35 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/02/23 22:24:01 by balkis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS 	=	main.cpp \
-			newZombie.cpp \
-			randomChump.cpp \
-			Zombie.cpp 
+			zombieHorde.cpp \
+			Zombie.cpp
 
-EXEC	= Zombie
+EXEC	= Zombie_Horde
 
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
