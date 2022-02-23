@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:57:32 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/23 12:00:24 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/23 17:55:35 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	Contact::add_contact(void)
 	std::getline(std::cin, this->_first_name);
 	while (this->_first_name == "")
 	{
-		std::cout << "You don't enter the first name!" << std::endl;	
+		std::cout << "You didn't enter the first name!" << std::endl;	
 		std::cout << ">Enter the first name: ";
 		std::getline(std::cin, this->_first_name);
 	}
@@ -49,7 +49,7 @@ void	Contact::add_contact(void)
 	std::getline(std::cin, this->_last_name);
 	while (this->_last_name == "")
 	{
-		std::cout << "You don't enter the last name!" << std::endl;	
+		std::cout << "You didn't enter the last name!" << std::endl;	
 		std::cout << ">Enter the last name: ";
 		std::getline(std::cin, this->_last_name);
 	}
@@ -59,7 +59,7 @@ void	Contact::add_contact(void)
 	std::getline(std::cin, this->_nickname);
 	while (this->_nickname == "")
 	{
-		std::cout << "You don't enter the nickname!" << std::endl;	
+		std::cout << "You didn't enter the nickname!" << std::endl;	
 		std::cout << ">Enter the nickname: ";
 		std::getline(std::cin, this->_nickname);
 	}
@@ -69,7 +69,7 @@ void	Contact::add_contact(void)
 	std::getline(std::cin, this->_phone_number);
 	while (this->_phone_number == "")
 	{
-		std::cout << "You don't enter the phone number!" << std::endl;	
+		std::cout << "You didn't enter the phone number!" << std::endl;	
 		std::cout << ">Enter the phone number: ";
 		std::getline(std::cin, this->_phone_number);
 	}
@@ -79,7 +79,7 @@ void	Contact::add_contact(void)
 	std::getline(std::cin, this->_darkest_secret);
 	while (this->_darkest_secret == "")
 	{
-		std::cout << "You don't enter the darkest secret!" << std::endl;	
+		std::cout << "You didn't enter the darkest secret!" << std::endl;	
 		std::cout << ">Enter the darkest secret: ";
 		std::getline(std::cin, this->_darkest_secret);
 	}
