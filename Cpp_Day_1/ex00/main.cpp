@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 13:28:32 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/23 15:02:46 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/23 15:34:57 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,15 @@
 
 int main(int argc, char **argv)
 {
+    (void)argc;
+    (void)argv;
+    /*
     //Tu declares un zombie sur la stack ici 
     {
         delete //;
         //declare 
         //
-    }
+    }*/
     return (0);
 }
 

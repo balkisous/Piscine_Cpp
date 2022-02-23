@@ -6,13 +6,16 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/02/23 13:30:54 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/02/23 15:35:35 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS 	= megaphone.cpp
+SRCS 	=	main.cpp \
+			newZombie.cpp \
+			randomChump.cpp \
+			Zombie.cpp 
 
-MEGA	= megaphone
+EXEC	= Zombie
 
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
@@ -22,16 +25,16 @@ FLAGS	= -Wall -Werror -Wextra -std=c++98
 %.o : %.cpp
 	$(CC) -c $(CFLAGS) $(FLAGS) -o $@ $<
 				
-${MEGA}:	${OBJ}
-			$(CC) ${FLAGS} ${OBJ} -o ${MEGA}
+${EXEC}:	${OBJ}
+			$(CC) ${FLAGS} ${OBJ} -o ${EXEC}
 
-all		: ${MEGA}
+all		: ${EXEC}
 
 clean	:
 				${RM} ${OBJ}
 
 fclean	:	clean
-				${RM} ${MEGA}
+				${RM} ${EXEC}
 
 re		:	fclean all
 
