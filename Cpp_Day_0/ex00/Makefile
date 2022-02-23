@@ -6,7 +6,7 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/02/19 13:43:47 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/02/23 11:07:03 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ MEGA	= megaphone
 
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
-CC		= clang++
+CC		= c++
 FLAGS	= -Wall -Werror -Wextra -std=c++98
 
 %.o : %.cpp
