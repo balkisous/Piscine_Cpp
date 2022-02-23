@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.Classe.cpp                               :+:      :+:    :+:   */
+/*   PhoneBook.Class.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 14:47:46 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/22 19:43:47 by balkis           ###   ########.fr       */
+/*   Created: 2022/02/23 11:58:15 by bben-yaa          #+#    #+#             */
+/*   Updated: 2022/02/23 12:10:56 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include "PhoneBook.Classe.hpp"
+#include "PhoneBook.Class.hpp"
 #include <cstring>
+#include <sstream>
 
 PhoneBook::PhoneBook(void)
 {
-	std::cout << "Bonjour, Je suis le construteur PhoneBook" << std::endl;
+//	std::cout << "Bonjour, Je suis le construteur PhoneBook" << std::endl;
 	return ;
 }
 
 PhoneBook::~PhoneBook(void)
 {
-	std::cout << "Au revoir, Je suis le destructeur PhoneBook" << std::endl;
+//	std::cout << "Au revoir, Je suis le destructeur PhoneBook" << std::endl;
 	return ;
 }
 
@@ -31,9 +32,10 @@ void	PhoneBook::search(int num_contact)
 {
 	int			num_c;
 	std::string	cmd;
+	std::stringstream ss;
 
 	num_c = 0;
-	std::cout << "    index |first name| last name| nickname " << std::endl;
+	std::cout << "    index |first name| last name|  nickname" << std::endl;
 	while (num_c < 8)
 	{
 		std::cout << "         " << num_c + 1 << "|";
@@ -49,8 +51,10 @@ void	PhoneBook::search(int num_contact)
 		std::cout << "What contact you search?" << std::endl;
 		std::getline(std::cin, cmd);
 	}
-	num_c = std::stoi(cmd);
-	if (num_c >= 0 && num_c <= num_contact)
+	ss << cmd;
+	ss >> num_c;
+	//num_c = std::stoi(cmd); -> sur mac
+	if (num_c > 0 && num_c <= num_contact)
 		this->contact[num_c - 1].display_all();
 	else
 		std::cout << "Wrong number!" << std::endl;
@@ -84,7 +88,7 @@ void	PhoneBook::start_phone(void)
 			std::cout << "What is the name contact you search ?" << std::endl;
 			this->search(num_conct);
 		}
-		else if (cmd == "EXIT" || cmd == "exit")
+		else if (cmd == "EXIT" || cmd == "exit" || std::cin.eof())
 		{
 			std::cout << "Bye! See you next time :)!" << std::endl;
 			break;

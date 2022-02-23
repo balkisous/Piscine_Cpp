@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.Classe.cpp                                 :+:      :+:    :+:   */
+/*   Contact.Class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/20 14:46:59 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/22 19:39:07 by balkis           ###   ########.fr       */
+/*   Created: 2022/02/23 11:57:32 by bben-yaa          #+#    #+#             */
+/*   Updated: 2022/02/23 12:00:24 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include "Contact.Classe.hpp"
+#include "Contact.Class.hpp"
 
 Contact::Contact(void)
 {
@@ -21,13 +21,11 @@ Contact::Contact(void)
 	this->_nickname = "";
 	this->_phone_number = "";
 	this->_darkest_secret = "";
-	//std::cout << " Bonjour, Je suis le construteur Contact" << std::endl;
 	return ;
 }
 
 Contact::~Contact(void)
 {
-	//std::cout << "Au revoir, Je suis le destructeur Contact" << std::endl;
 	return ;
 }
 
@@ -141,11 +139,12 @@ void	Contact::display_one(void)
 		std::cout << this->_nickname;
 	}
 }
+
 void	Contact::display_all(void)
 {
-	std::cout << "fist name" << _first_name << std::endl;
-	std::cout << "last name" << _last_name << std::endl;
-	std::cout << "nickname" << _nickname << std::endl;
-	std::cout << "phone number" << _phone_number << std::endl;
-	std::cout << "darkest secret" << _darkest_secret << std::endl;
+	std::cout << "fist name " << _first_name << std::endl;
+	std::cout << "last name " << _last_name << std::endl;
+	std::cout << "nickname " << _nickname << std::endl;
+	std::cout << "phone number " << _phone_number << std::endl;
+	std::cout << "darkest secret " << _darkest_secret << std::endl;
 }
