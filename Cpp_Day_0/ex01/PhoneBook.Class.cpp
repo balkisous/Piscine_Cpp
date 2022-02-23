@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 11:58:15 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/23 12:10:56 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/23 15:20:54 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ PhoneBook::~PhoneBook(void)
 	return ;
 }
 
-void	PhoneBook::search(int num_contact)
+void	PhoneBook::search(int num_contact, int done)
 {
 	int			num_c;
 	std::string	cmd;
@@ -54,7 +54,7 @@ void	PhoneBook::search(int num_contact)
 	ss << cmd;
 	ss >> num_c;
 	//num_c = std::stoi(cmd); -> sur mac
-	if (num_c > 0 && num_c <= num_contact)
+	if ((num_c > 0 && num_c <= num_contact) || done == 1)
 		this->contact[num_c - 1].display_all();
 	else
 		std::cout << "Wrong number!" << std::endl;
@@ -63,9 +63,11 @@ void	PhoneBook::search(int num_contact)
 void	PhoneBook::start_phone(void)
 {
 	int				num_conct;
+	int				done;
 	std::string		cmd;
 	
 	num_conct = 0;
+	done = 0;
 	std::cout << "Welcome to the cpp PhoneBook!!" << std::endl;
 	while (42)
 	{
@@ -78,6 +80,7 @@ void	PhoneBook::start_phone(void)
 				std::cout << "You're already fill all the contact" << std::endl;
 				std::cout << "The oldest contact replace by the new one" << std::endl;
 				num_conct = 0;
+				done = 1;
 			}
 			this->contact[num_conct].add_contact();
 			std::cout << "Sucess, You add the contact number " << num_conct + 1 << "!!" << std::endl << std::endl;
@@ -86,7 +89,7 @@ void	PhoneBook::start_phone(void)
 		else if (cmd == "SEARCH" || cmd == "search")
 		{
 			std::cout << "What is the name contact you search ?" << std::endl;
-			this->search(num_conct);
+			this->search(num_conct, done);
 		}
 		else if (cmd == "EXIT" || cmd == "exit" || std::cin.eof())
 		{
