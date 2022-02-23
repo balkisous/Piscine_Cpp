@@ -1,39 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/23 13:28:48 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/23 22:40:53 by balkis           ###   ########.fr       */
+/*   Created: 2022/02/23 22:24:38 by balkis            #+#    #+#             */
+/*   Updated: 2022/02/23 23:04:45 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-
-#include <string>
-#include <iostream>
-
-class Zombie{
-
-	public:
-
-	Zombie(std::string name);
-	~Zombie(void);
-
-	void		announce(void) const;
-	std::string	get_name(void) const;
-
-	private:
-		std::string	_name;
+int main(void)
+{
+	Zombie	*Horde = zombieHorde(12, "Guiss et Guess");
 	
-};
-
-
-Zombie*	newZombie( std::string name );
-void	randomChump( std::string name );
-
-# endif
+	delete [] Horde;
+}

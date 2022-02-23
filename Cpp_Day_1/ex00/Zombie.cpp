@@ -6,7 +6,7 @@
 /*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 13:28:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/23 22:18:53 by balkis           ###   ########.fr       */
+/*   Updated: 2022/02/23 22:41:05 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Zombie::~Zombie(void)
 	return ;
 }
 
-void	Zombie::announce(void)
+void	Zombie::announce(void) const
 {
 	if (this->_name == "Foo")
 		std::cout << this->_name;
