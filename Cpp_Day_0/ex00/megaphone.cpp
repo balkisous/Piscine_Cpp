@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/19 11:32:14 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/23 11:04:59 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/24 15:29:33 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int	main(int argc, char **argv)
 			i++;
 		}
 		i = 0;
-		std::cout << " ";
 		j++;
 	}
 	std::cout << std::endl;
