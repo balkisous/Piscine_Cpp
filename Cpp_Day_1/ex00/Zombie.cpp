@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 13:28:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/23 18:34:52 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/02/23 22:41:05 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ Zombie::Zombie(std::string name) : _name(name)
 
 Zombie::~Zombie(void)
 {
-	std::cout << "Je suis le destructeur Zombie! brrr.." << std::endl;
+	std::cout << this->_name << " .... die!! Brrbbbrr ..." << std::endl << std::endl;
 	return ;
 }
 
-void	Zombie::announce(void)
+void	Zombie::announce(void) const
 {
 	if (this->_name == "Foo")
 		std::cout << this->_name;
