@@ -1,0 +1,27 @@
+
+
+
+Class Weapon 
+
+fonction ->
+
+
+            Weapon(std::string name_weapon);
+            getType();
+            setType();
+
+
+Classe HumanA
+
+        fonction->
+                HumanA(std::string name, Weapon &weap);
+                attack();
+
+
+Class HumanB
+
+
+        fonction->
+            HumanB(std::string name, Weapon *weap);
+            attack();
+            setWeapon(Weapon weap);
