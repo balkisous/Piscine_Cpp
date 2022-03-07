@@ -6,11 +6,12 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/02/24 16:07:06 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/03/07 11:53:59 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS 	=	main.cpp 
+SRCS 	=	main.cpp \
+			Karen.cpp
 
 EXEC	= Karen
 

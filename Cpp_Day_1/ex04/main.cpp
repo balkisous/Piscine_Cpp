@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 12:28:01 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/25 11:19:38 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/07 11:36:21 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,12 @@ std::string	ft_replace(std::string content, std::string s1, std::string s2)
 			}
 			else if (content[i + j] == s1[j])
 			{
+				std::cout << "doesn't copy" << std::endl;
 				//on passe, on a deja copie
 			}
 			else
 			{
+				std::cout << "i'm here to add" << std::endl;
 				ncont += content;
 				break;	//on ne copie plus
 			}
@@ -114,7 +116,7 @@ int	main(int argc, char **argv)
 		file.close();
 		std::cout << "A la fin de la boucle content vaut -" << content << "-"<< std::endl;	//->a enlever
 		fname += ".replace";				//->nom du nouveau fichier
-		std::cout << "le name du new file est " << fname << std::endl;			//->a enlever
+		std::cout << "le name du new file est " << fname << std::endl;						//->a enlever
 		
 		char	namefile[fname.length() + 1];
 		strcpy(namefile, fname.c_str());
