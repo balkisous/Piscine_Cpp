@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 12:28:01 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/07 11:36:21 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/08 16:18:44 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 std::string	ft_replace(std::string content, std::string s1, std::string s2)
 {
-	std::string		ncont;
-	unsigned long	j;
-	unsigned long	i;
+	std::string			ncont;
+	unsigned long int	j;
+	unsigned long int	i;
 
 	i = 0;
 	j = 0;
@@ -41,7 +41,7 @@ std::string	ft_replace(std::string content, std::string s1, std::string s2)
 			else
 			{
 				std::cout << "i'm here to add" << std::endl;
-				ncont += content;
+				ncont += content[i];
 				break;	//on ne copie plus
 			}
 			j++;
@@ -114,10 +114,7 @@ int	main(int argc, char **argv)
 			content += '\n';
 		}
 		file.close();
-		std::cout << "A la fin de la boucle content vaut -" << content << "-"<< std::endl;	//->a enlever
 		fname += ".replace";				//->nom du nouveau fichier
-		std::cout << "le name du new file est " << fname << std::endl;						//->a enlever
-		
 		char	namefile[fname.length() + 1];
 		strcpy(namefile, fname.c_str());
 		
