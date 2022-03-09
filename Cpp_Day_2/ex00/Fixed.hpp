@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:51:31 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/09 16:55:40 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/09 17:16:26 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class Fixed
 		Fixed(Fixed const & fx);				//canonical consterur de recopie
 		~Fixed(void);							//canonical destructeur par defaut
 
-		Fixed &	opereator=(Fixed const & fx);	//canonical surcharge de l'operation d'affectation
+		Fixed &	operateur(Fixed const & fx);	//canonical surcharge de l'operation d'affectation
 		int	getRawBits(void) const;
-		int setRawBits(int const raw);
+		void setRawBits(int const raw);
 
 	private :
 

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:51:27 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/09 17:08:08 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/09 17:19:52 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ Fixed::Fixed(void)
 	return ;
 }
 
-Fixed::Fixed(int n)		_nb_fixed(n)//constructor  
+Fixed::Fixed(int n)		//constructor  
 {
+	_nb_fixed = n;
 	std::cout << "Default constructor called" << std::endl;
 	return ;
 }
@@ -34,11 +35,11 @@ Fixed::Fixed(Fixed const & fx)
 {
 	std::cout << "Copy constructor called" << std::endl;
 
-	this = fx;
+	*this = fx;
 	return ;
 }
 
-Fixed &	Fixed::operateur=(Fixed const & fx)	//ft_operator assignation
+Fixed &	Fixed::operateur(Fixed const & fx)	//ft_operator assignation
 {
 	std::cout << "Copy assignation called" << std::endl;
 	
