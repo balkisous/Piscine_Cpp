@@ -3,14 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: balkis <balkis@student.42.fr>              +#+  +:+       +#+         #
+#    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/03/09 11:49:47 by balkis           ###   ########.fr        #
+#    Updated: 2022/03/09 17:06:35 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS 	=	main.cpp \
+			Fixed.cpp
 
 EXEC	= integer
 
