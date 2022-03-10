@@ -6,7 +6,7 @@
 /*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:51:27 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/10 10:27:05 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/10 14:38:27 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Fixed::Fixed(Fixed const & fx)
 
 Fixed &	Fixed::operator=(const Fixed & fx)	//ft_operator assignation
 {
-	std::cout << "Copy assignation called" << std::endl;
+	std::cout << "Copy  assignment operator called" << std::endl;
 	
 	this->_nb_fixed = fx.getRawBits();
 	return *this ;
