@@ -6,21 +6,14 @@
 /*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:51:27 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/10 10:15:31 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/10 10:27:05 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(void)
+Fixed::Fixed(void) : _nb_fixed(0)	//constructor
 {
-	std::cout << "Default constructor called" << std::endl;
-	return ;
-}
-
-Fixed::Fixed(int n)		//constructor  
-{
-	_nb_fixed = n;
 	std::cout << "Default constructor called" << std::endl;
 	return ;
 }
