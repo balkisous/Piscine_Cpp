@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:02:01 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/11 08:11:21 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/11 14:45:42 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ HumanB::~HumanB()
 void    HumanB::attack()
 {
 	std::cout << this->name << " attacks with their ";
-	std::cout << this->b_weapon->getType() << std::endl;
+	if (this->b_weapon)
+		std::cout << this->b_weapon->getType() << std::endl;
+	else
+		std::cout << std::endl;
 }
 
 /* Une reference est : toujours derefencee + jamais nulle (ne peut etre intialise) et "constante"
