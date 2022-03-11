@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:01:57 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/02/24 11:41:05 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/11 08:10:49 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ public :
 		~HumanA();
 
 		std::string	name;
-		Weapon		&a_weapon;
 				
 		void		attack();
 
 private :
+		Weapon		&a_weapon;
 		
 };
 

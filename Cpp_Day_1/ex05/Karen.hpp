@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 16:07:49 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/09 09:47:36 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/11 08:26:56 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class Karen
 {
-	typedef void(Karen::*ft_ptr)(void) const;
+	typedef void(Karen::*ft_ptr)(void) const;	//definition d'un nouveau type de variable
 
 public:
 			Karen(void);

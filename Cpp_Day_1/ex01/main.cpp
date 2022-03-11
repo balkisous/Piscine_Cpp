@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 22:24:38 by balkis            #+#    #+#             */
-/*   Updated: 2022/02/23 23:04:45 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/11 08:01:07 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main(void)
 {
-	Zombie	*Horde = zombieHorde(12, "Guiss et Guess");
+	Zombie	*Horde = zombieHorde(12, "Shrek");
 	
 	delete [] Horde;
 }

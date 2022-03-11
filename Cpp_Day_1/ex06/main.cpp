@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 16:07:52 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/09 10:38:24 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/11 08:31:29 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,32 +21,10 @@ int main (int argc, char **argv)
 	{
 		level = argv[1];
 		if (level != "DEBUG" && level != "INFO" && level != "WARNING" && level != "ERROR")	
-			return (std::cout << "Wrong message error" << std::endl, 0);
+			return (std::cout << "[ Probably complaining about insignificant problems ]" << std::endl, 0);
 		minikaren.complain(level);		
 	}
 	else
 		std::cout << "Error, Wrong number of arguments!" << std::endl;
-	return (0);
-	/* 
-	minikaren.complain("DEBUG");
-
-	std::cout << "--------" << std::endl;
-
-	minikaren.complain("ERROR");
-
-	std::cout << "--------" << std::endl;
-
-	minikaren.complain("bchjdsbd");
-	
-	std::cout << "--------" << std::endl;
-	
-	minikaren.complain("");
-
-	std::cout << "--------" << std::endl;
-	
-	minikaren.complain("INFO");
-	
-	std::cout << "--------" << std::endl;*/
-	
 	return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Karen.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 16:07:43 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/09 10:13:27 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/11 08:27:17 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	Karen::complain(std::string level)
 
 	///version a faire
 	if (level != "DEBUG" && level != "INFO" && level != "WARNING" && level != "ERROR")	
-		return ;	//-> secure verifie que level est au moin egale a un des messages 
+		return ;	//-> secure verifie que level est au moins egale a un des messages 
 
 	std::string	mess[4]					= {"DEBUG", "INFO", "WARNING", "ERROR"};	//-> tab string de tout les messages
 	void (Karen::*ft_ptr[4]) () const	= {&Karen::debug, &Karen::info, &Karen::warning, &Karen::error}; //-> tab pointeur de fonction membre des quatres fonctions de message

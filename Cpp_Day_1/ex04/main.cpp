@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 12:28:01 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/08 16:18:44 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/11 08:24:09 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,15 @@ std::string	ft_replace(std::string content, std::string s1, std::string s2)
 			if (content[i + j] == s1[j] && j == s1.length() - 1)
 			{
 				ncont += s2;			//on ajoute s2 a ncont
-				i += s1.length() - 1;	//on met le conteur au bonne endroit
+				i += s1.length() - 1;	//on met le conteur au bonne indice
 			}
 			else if (content[i + j] == s1[j])
 			{
-				std::cout << "doesn't copy" << std::endl;
-				//on passe, on a deja copie
+				//on passe, on a deja copie dans le if du dessus 
 			}
 			else
 			{
-				std::cout << "i'm here to add" << std::endl;
-				ncont += content[i];
+				ncont += content[i]; //on ajoute le char juste apres s1 (a la place de s1 on a mis s2 dans ncont) 
 				break;	//on ne copie plus
 			}
 			j++;
@@ -57,29 +55,15 @@ int	main(int argc, char **argv)
 {	
 	
 	/*
-
-		//bmerchin
 		check s1 et s2 existe
 		declare fstream
 		open file with	.is_open
 		use getline (file, temp)
-		tu met tou dans tmp et t'ajoute a chaque fois dans content
-						.eof ->voir la doc
-		une fois que content et remplis on cherche s1 et on remplace par s2
-		on creer et on ouvre le nouveau fichier et on le remplis
-	
-		//malatinis
-		check  blablaba
-		replace name blablabla .....
-		declare ifstream
-		open wtih .open
-		check with .fail 
-		create a new file with an ofstream
-		replace  
+		on met tout dans tmp et on ajoute a chaque fois dans content
+						.eof ->voir la doc cpp
+		une fois que content est rempli on cherche s1 et on remplace par s2
+		on cree et on ouvre le nouveau fichier et on le rempli
 
-		I have to :
-		//	create a new file, copy from file and if (s1) replace by s2
-		//	NO std::string::replace
 		//	ofstream -> write on files
 		//	ifstream -> read from files
 		//	fstream -> read from files and write on files 
@@ -88,13 +72,13 @@ int	main(int argc, char **argv)
 
 	if (argc == 4)
 	{
-		std::string		fname = argv[1];	//->nome du fichier a ouvrir
-		std::string		s1 = argv[2];		//->string 1
-		std::string		s2 = argv[3];		//->string 2
-		std::ifstream	file;				//->le fichier a lire
-		std::fstream	nfile;				//->le nouveau fichier a creer
-		std::string		content;			//->on va mettre tout ce qui a en dans le fichier file dans content
-		std::string		tmp;				//->va nous servir a lire le fichier car getline s'arrete lorsqu'il 
+		std::string		fname = argv[1];	//-> nome du fichier a ouvrir
+		std::string		s1 = argv[2];		//-> string 1
+		std::string		s2 = argv[3];		//-> string 2
+		std::ifstream	file;				//-> le fichier a lire
+		std::fstream	nfile;				//-> le nouveau fichier a creer
+		std::string		content;			//-> on va mettre tout ce qui a en dans le fichier file dans content
+		std::string		tmp;				//-> va nous servir a lire le fichier car getline s'arrete lorsqu'il 
 											// trouve '\n'
 
 		if (fname.length() == 0)
@@ -109,20 +93,20 @@ int	main(int argc, char **argv)
 		while (getline(file, tmp))
 		{
 			content += tmp;
-			if (file.eof())					//->on est arriver a la fin du fichier
+			if (file.eof())					//-> on est arriver a la fin du fichier
 				break ;
 			content += '\n';
 		}
 		file.close();
-		fname += ".replace";				//->nom du nouveau fichier
+		fname += ".replace";				//-> nom du nouveau fichier
 		char	namefile[fname.length() + 1];
-		strcpy(namefile, fname.c_str());
+		strcpy(namefile, fname.c_str());	//c_str fonction qui "transforme" une string en char *
 		
 		nfile.open(namefile, std::ios::out);				//-> in creer le nouveau fichier  ios-> allows output (write operations) to a stream.
 		if (!nfile)
 			return (std::cout << "Error in creating file!" << std::endl, 0);
 		content = ft_replace(content, s1, s2);
-		nfile << content;
+		nfile << content;		//on insere la string dans le fichier
 		nfile.close();
 	}
 	else

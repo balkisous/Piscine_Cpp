@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 23:15:27 by balkis            #+#    #+#             */
-/*   Updated: 2022/02/24 08:53:57 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/11 08:04:47 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	main(void)
 	std::cout << "La valeur pointée par stringPTR est	" << *stringPTR << std::endl;
 	std::cout << "La valeur pointée par stringREF est	" << stringREF << std::endl << std::endl;
 
-	////Ce day a pour objectif de nous apprendre les references (nouvelle notion) et qu'elle
-	//// se comporte comme un pointeur toujours deferencer et qui doit obligatoirement pointee 
-	//// sur une quelque chose des qu'on la cree, elle pointe TOUJOURS sur une valeur
+	//// Ce day a pour objectif de nous apprendre les references (une toute nouvelle notion) et qu'elle
+	//// se comporte comme un pointeur toujours déréférencer et qui doit obligatoirement pointee 
+	//// sur une chose des qu'on l'a declare, elle pointe TOUJOURS sur une valeur
 	//// la valeur peut etre modifie comme le font les pointeurs
 
 	return (0);
