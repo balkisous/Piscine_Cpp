@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:51:27 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/10 18:38:21 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/15 11:52:12 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ Fixed &	Fixed::operator=(const Fixed & fx)	//ft_operator assignation	-> cannonic
 
 bool	Fixed::operator>( const Fixed & fx)
 {
-	return (this->_nb_fixed > fx._nb_fixed);
+	return (this->toFloat() > fx.toFloat());
 }
 
 bool	Fixed::operator<( const Fixed & fx)
@@ -90,22 +90,22 @@ bool	Fixed::operator!=( const Fixed & fx)
 
 Fixed	Fixed::operator+(const Fixed &b) const
 {
-	return (this->_nb_fixed + b.getRawBits());
+	return (this->toFloat() + b.toFloat());
 }
 
 Fixed	Fixed::operator-(const Fixed &b) const
 {
-	return (this->_nb_fixed - b.getRawBits());
+	return (this->toFloat() - b.toFloat());
 }
 
 Fixed	Fixed::operator*(const Fixed &b) const
 {
-	return (this->_nb_fixed * b.getRawBits());
+	return (this->toFloat() * b.toFloat());
 }
 
 Fixed	Fixed::operator/(const Fixed &b) const
 {
-	return (this->_nb_fixed / b.getRawBits());
+	return (this->toFloat() / b.toFloat());
 }
 
 //-------------------------------------------------------
@@ -156,7 +156,7 @@ Fixed	& Fixed::max(Fixed & fx1, Fixed & fx2)
 	else
 		return (fx2);
 }
-
+/*
 Fixed const	& Fixed::min(Fixed const & fx1, Fixed const & fx2)
 {
 	if (fx1 < fx2)
@@ -172,7 +172,7 @@ Fixed const	& Fixed::max(Fixed const & fx1, Fixed const & fx2)
 	else
 		return (fx2);
 }
-
+*/
 //-------------------------------------------------------
 // fonction get, set and ostream
 
@@ -203,6 +203,7 @@ std::ostream & operator << (std::ostream & cout, const Fixed & fx)
 	// les possibilités classiques de << pour les types de base
 	// c’est-à-dire des instructions de la forme :
 	// sortie << ..... ;
+
 	cout << fx.toFloat();
 	return (cout);
 }
