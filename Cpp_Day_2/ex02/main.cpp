@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:50:19 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/15 12:59:43 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/16 12:00:28 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ int	main(void)
 	std::cout << "d / c = " << d / c << "    (expecting: 1.35)" << std::endl;
 	std::cout << std::endl;
 
-	//std::cout << "b > c : " << (int)(b > c) << "    (expecting: 0)" << std::endl;
-	//std::cout << "b < c : " << (int)(b < c) << "    (expecting: 1)" << std::endl;
-	//std::cout << "b <= c : " << (int)(b <= c) << "    (expecting: 1)" << std::endl;
-	//std::cout << "b >= c : " << (int)(b >= c) << "    (expecting: 0)" << std::endl;
+	std::cout << "b > c : " << (int)(b > c) << "    (expecting: 0)" << std::endl;
+	std::cout << "b < c : " << (int)(b < c) << "    (expecting: 1)" << std::endl;
+	std::cout << "b <= c : " << (int)(b <= c) << "    (expecting: 1)" << std::endl;
+	std::cout << "b >= c : " << (int)(b >= c) << "    (expecting: 0)" << std::endl;
 	std::cout << "a == b : " << (int)(a == b) << "    (expecting: 1)" << std::endl;
 	std::cout << "a == c : " << (int)(a == c) << "    (expecting: 0)" << std::endl;
 	std::cout << "a != b : " << (int)(a != b) << "    (expecting: 0)" << std::endl;
@@ -69,8 +69,8 @@ int	main(void)
 
 	std::cout << "a = " << a << std::endl;
 	std::cout << "d = " << d << std::endl;
-	//std::cout << "member   min(a, d) = " << Fixed::min(a, d) << "  (expecting: 1.109)" << std::endl;
-	//std::cout << "member   max(a, d) = " << Fixed::max(a, d) << "        (expecting: 3)" << std::endl;
+	std::cout << "member   min(a, d) = " << Fixed::min(a, d) << "  (expecting: 1.109)" << std::endl;
+	std::cout << "member   max(a, d) = " << Fixed::max(a, d) << "        (expecting: 3)" << std::endl;
 
 	return (0);
 }

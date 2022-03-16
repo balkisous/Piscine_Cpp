@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:51:31 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/10 18:26:42 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/16 11:57:52 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ class Fixed
 
 		
 		//6 operator de comparaison
-		bool	operator>( const Fixed & fx);	//this > fx
-		bool	operator<( const Fixed & fx);	//this < fx
-		bool	operator>=( const Fixed & fx);	//this >= fx
-		bool	operator<=( const Fixed & fx);	//this <= fx
+		bool	operator>( const Fixed & fx) const;	//this > fx
+		bool	operator<( const Fixed & fx) const;	//this < fx
+		bool	operator>=( const Fixed & fx) const;	//this >= fx
+		bool	operator<=( const Fixed & fx) const;	//this <= fx
 		bool	operator==( const Fixed & fx);	//this == fx
 		bool	operator!=( const Fixed & fx);	//this != fx
 		

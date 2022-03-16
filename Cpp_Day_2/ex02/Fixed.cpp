@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 11:51:27 by balkis            #+#    #+#             */
-/*   Updated: 2022/03/15 11:52:12 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/16 12:00:44 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,34 +55,34 @@ Fixed &	Fixed::operator=(const Fixed & fx)	//ft_operator assignation	-> cannonic
 //-------------------------------------------------------
 //	6 opérateurs de comparaison
 
-bool	Fixed::operator>( const Fixed & fx)
+bool	Fixed::operator>( const Fixed & fx) const
 {
 	return (this->toFloat() > fx.toFloat());
 }
 
-bool	Fixed::operator<( const Fixed & fx)
+bool	Fixed::operator<( const Fixed & fx) const
 {
-	return (this->_nb_fixed < fx._nb_fixed);
+	return (this->toFloat() < fx.toFloat());
 }
 
-bool	Fixed::operator>=( const Fixed & fx)
+bool	Fixed::operator>=( const Fixed & fx) const
 {
-	return (this->_nb_fixed >= fx.getRawBits());
+	return (this->toFloat() >= fx.toFloat());
 }
 
-bool	Fixed::operator<=( const Fixed & fx)
+bool	Fixed::operator<=( const Fixed & fx) const
 {
-	return (this->_nb_fixed <= fx.getRawBits());
+	return (this->toFloat() <= fx.toFloat());
 }
 
 bool	Fixed::operator==( const Fixed & fx)
 {
-	return (this->_nb_fixed == fx.getRawBits());
+	return (this->toFloat() == fx.toFloat());
 }
 
 bool	Fixed::operator!=( const Fixed & fx)
 {
-	return (this->_nb_fixed != fx.getRawBits());
+	return (this->toFloat() != fx.toFloat());
 }
 
 //-------------------------------------------------------
@@ -110,6 +110,7 @@ Fixed	Fixed::operator/(const Fixed &b) const
 
 //-------------------------------------------------------
 //	4 opérateur (in/dé)crémentation
+//
 //	https://www.geeksforgeeks.org/increment-and-decrement-operator-overloading-in-c/?ref=rp
 //		L-> explique comment faire
 
@@ -156,7 +157,7 @@ Fixed	& Fixed::max(Fixed & fx1, Fixed & fx2)
 	else
 		return (fx2);
 }
-/*
+
 Fixed const	& Fixed::min(Fixed const & fx1, Fixed const & fx2)
 {
 	if (fx1 < fx2)
@@ -172,7 +173,7 @@ Fixed const	& Fixed::max(Fixed const & fx1, Fixed const & fx2)
 	else
 		return (fx2);
 }
-*/
+
 //-------------------------------------------------------
 // fonction get, set and ostream
 
