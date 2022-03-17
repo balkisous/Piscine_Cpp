@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:47:17 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/17 11:07:12 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/17 12:46:36 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ class ClapTrap
 		void	beRepaired(unsigned int amount);
 
 		std::string	getName(void)const;
+		void		annonce(void)const;
 		
 		//Desstructor//
 		virtual ~ClapTrap(void);				//canonical destructeur par defaut
