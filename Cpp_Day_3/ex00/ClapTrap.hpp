@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:47:17 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/16 15:04:59 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/17 11:07:12 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class ClapTrap
 		void	attack(const std::string &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+
+		std::string	getName(void)const;
 		
 		//Desstructor//
 		virtual ~ClapTrap(void);				//canonical destructeur par defaut
@@ -39,9 +41,9 @@ class ClapTrap
 	private :
 
 		std::string	_Name;
-		int			_Hit_point = 10;
-		int			_Energy_point = 10;
-		int			_Attack_dammage = 0;
+		int			_Hit_point;
+		int			_Energy_point;
+		int			_Attack_dammage;
 		
 };
 
