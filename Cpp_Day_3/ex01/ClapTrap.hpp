@@ -6,21 +6,19 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:47:17 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/17 14:13:24 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/17 15:15:30 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#ifndef CLAPTRAP_HPP
-//# define CLAPTRAP_HPP
-#pragma once
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
+
 #include <iostream>
 
 class ClapTrap
 {
 	public :
 		//Constructor//
-		ClapTrap(void);							//canonical constructeur par defaut
-		ClapTrap(std::string Name);
 		ClapTrap(ClapTrap const & rhs);				//canonical consterur de recopie
 
 		//Function//
@@ -33,19 +31,21 @@ class ClapTrap
 		void		annonce(void)const;
 		
 		//Desstructor//
-		virtual ~ClapTrap(void);				//canonical destructeur par defaut
 												//virtal avoid memory leaks in case of inheritance class
 
 
 	protected :
-
-	private :
-
+		ClapTrap(void);							//canonical constructeur par defaut
+		ClapTrap(std::string Name);
+		virtual ~ClapTrap(void);				//canonical destructeur par defaut
+		
 		std::string	_Name;
 		int			_Hit_point;
 		int			_Energy_point;
 		int			_Attack_dammage;
+
+	private :
 		
 };
 
-//# endif
+# endif
