@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 15:16:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/19 10:14:24 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/19 13:43:37 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ class ScavTrap : public ClapTrap
 		virtual ~ScavTrap();						//canonical: destructeur par defaut
 
 		void	attack(std::string name);
+		void	guardGate(void);
+		int		getGate(void) const;
 
 	private:
-		void	guardGate(void);
-
+		bool	_gate;
 };
+	std::ostream & operator << (std::ostream & sortie, const ScavTrap & st);

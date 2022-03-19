@@ -6,13 +6,13 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 14:47:20 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/19 09:08:53 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/19 13:30:20 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) :  _Name("Unknow"), _Hit_point(100), _Energy_point(50), _Attack_dammage(20) //constructor par defaut
+ClapTrap::ClapTrap(void) :  _Name("Unknow"), _Hit_point(10), _Energy_point(10), _Attack_dammage(0) //constructor par defaut
 {
 	std::cout << "Default constructor ClapTrap called" << std::endl;
 	return ;
@@ -20,13 +20,13 @@ ClapTrap::ClapTrap(void) :  _Name("Unknow"), _Hit_point(100), _Energy_point(50),
 
 ClapTrap::ClapTrap(std::string Name) : _Name(Name), _Hit_point(100), _Energy_point(50), _Attack_dammage(20)
 {
-	std::cout << "Constructor string ClapTrap called" << std::endl;
+	//std::cout << "Constructor string ClapTrap called" << std::endl;
 	return ;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & rhs)
 {
-	//std::cout << "Copy Constructor called" << std::endl;
+	std::cout << "Copy Constructor called" << std::endl;
 	*this = rhs;
 	return ;
 }
