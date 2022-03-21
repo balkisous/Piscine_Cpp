@@ -6,23 +6,36 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:15 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 11:49:49 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/21 14:34:59 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
 int main(void)
 {
 	const Animal* meta = new Animal();
+	std::cout << std::endl;
 	const Animal* dog = new Dog();
+	std::cout << std::endl;
 	const Animal* cat = new Cat();
+	std::cout << std::endl;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+	std::cout << dog->getType() << " " << std::endl;
+	std::cout << cat->getType() << " " << std::endl;
+
 	cat->makeSound();	//will output the cat sound!
 	dog->makeSound();	//will output the dog sound!
-	meta->makeSound();
+	meta->makeSound();	//will output the meta sound!
+
+	std::cout << std::endl;
+	delete meta;
+	std::cout << std::endl;
+	delete dog;
+	std::cout << std::endl;
+	delete cat;
 
 	return (0);
 }

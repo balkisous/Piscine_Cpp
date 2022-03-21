@@ -6,12 +6,15 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:05:55 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 12:28:39 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/21 14:36:06 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
+			///////////////////////////////////
+			///			Canonical			///
+			///////////////////////////////////
 Cat::Cat(void)
 {
 	std::cout << "Hello, i am Cat constructeur" <<std::endl;
@@ -19,7 +22,7 @@ Cat::Cat(void)
 	return ;
 }
 
-Cat::Cat(const Animal & rhs)
+Cat::Cat(const Cat & rhs)
 {
 	std::cout << "Hello, i am Cat Copy Constructor" << std::endl;
 	*this = rhs;
@@ -29,7 +32,7 @@ Cat::Cat(const Animal & rhs)
 Cat &Cat::operator=(const Cat &rhs)
 {
 	std::cout << "Hello, i am Cat operator assignment" << std::endl;
-	// mettre les membres this egaux a rhs
+	this->type = rhs.getType();
 	return (*this);
 }
 

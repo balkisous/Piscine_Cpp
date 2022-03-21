@@ -6,12 +6,14 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/03/21 11:30:06 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/03/21 14:01:34 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS 	=	main.cpp \
 			Animal.cpp \
+			Cat.cpp \
+			Dog.cpp
 
 EXEC	= integer
 

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:25 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 12:16:27 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/21 14:28:33 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ class Animal
 		Animal(Animal const & rhs);						//canonical constructeur de recopie
 		
 		//Function
-		Animal &operator= ( const Animal & rhs);	//canonical surcharge de l'operation d'affectation
-
+		Animal			&operator= ( const Animal & rhs);	//canonical surcharge de l'operation d'affectation
+		std::string		getType(void)const;
+		virtual void	makeSound(void)const;
+		
 		//Destructor
 		virtual ~Animal(void);							//canonical destructeur
 	
