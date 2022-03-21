@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:20:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 12:22:50 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/21 12:31:36 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Dog::Dog(void)
 {
 	std::cout << "Hello, i am Dog constructeur" <<std::endl;
+	this->type = "Wouaf!!Wouaf!";
 	return ;
 }
 

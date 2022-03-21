@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:27 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 11:41:54 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/21 12:28:47 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Animal::Animal(void)
 {
 	std::cout << "Hello, i am Animal Constructor" << std::endl;
-	this->type = "Unknow";
+	this->type = "Unknow sound from animal...";
 	return ;
 }
 
