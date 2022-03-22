@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:20:42 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 14:13:19 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/22 09:42:30 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Dog : public Animal
 
 		//Function
 		Dog &operator= ( const Dog & rhs);	//canonical surcharge de l'operation d'affectation
+		void	makeSound(void)const;
 
 		//Destructor
 		virtual ~Dog(void);					//canonical destructeur

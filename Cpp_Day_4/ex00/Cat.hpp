@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:16:57 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 14:36:30 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/22 09:32:07 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Cat : public Animal
 
 		//Function
 		Cat &operator= ( const Cat & rhs);	//canonical surcharge de l'operation d'affectation
+		void	makeSound(void)const;
 		//Variable
 
 		//Destructor

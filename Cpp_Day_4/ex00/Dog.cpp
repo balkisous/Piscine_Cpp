@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:20:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 14:25:11 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/22 09:43:21 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,9 @@
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Dog::Dog(void)
+Dog::Dog(void) : Animal("Dog")
 {
 	std::cout << "Hello, i am Dog constructeur" <<std::endl;
-	this->type = "Wouaf!!Wouaf!";
 	return ;
 }
 
@@ -32,7 +31,7 @@ Dog::Dog(const Dog & rhs)
 Dog &Dog::operator=(const Dog &rhs)
 {
 	std::cout << "Hello, i am Dog operator assignment" << std::endl;
-	this->type = rhs.getType();
+	this->setType(rhs.getType());
 	return (*this);
 }
 
@@ -42,3 +41,7 @@ Dog::~Dog(void)
 	return ;
 }
 
+void	Dog::makeSound(void) const
+{
+	std::cout << this->getType() << "'s sound is Wouaf! Wouaf!" << std::endl;
+}
