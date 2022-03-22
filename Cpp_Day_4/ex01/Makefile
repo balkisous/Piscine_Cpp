@@ -6,7 +6,7 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/03/21 14:47:09 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/03/22 14:31:22 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,14 @@ SRCS 	=	main.cpp \
 			Dog.cpp \
 			WrongCat.cpp \
 			WrongAnimal.cpp \
+			Brain.cpp
 
 EXEC	= integer
 
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
 CC		= c++
-FLAGS	= -Wall -Werror -Wextra -std=c++98
+FLAGS	= -Wall -Werror -Wextra -std=c++98 -g3 -fsanitize=address
 
 %.o : %.cpp
 	$(CC) -c $(CFLAGS) $(FLAGS) -o $@ $<

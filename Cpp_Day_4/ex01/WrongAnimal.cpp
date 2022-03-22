@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:27 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 14:47:30 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/22 09:54:02 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,14 @@
 WrongAnimal::WrongAnimal(void)
 {
 	std::cout << "Hello, i am WrongAnimal Constructor" << std::endl;
-	this->type = "Unknow sound from this animal...";
+	this->_type = "WrongAnimal";
+	return ;
+}
+
+WrongAnimal::WrongAnimal(std::string type)
+{
+	std::cout << "Hello, i am WrongAnimal String Constructor" << std::endl;
+	this->_type = type;
 	return ;
 }
 
@@ -32,7 +39,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal & rhs)
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs)
 {
 	std::cout << "Hello, i am WrongAnimal operator assignment" << std::endl;
-	this->type = rhs.type;
+	this->_type = rhs.getType();
 	return (*this);
 }
 
@@ -47,11 +54,17 @@ WrongAnimal::~WrongAnimal(void)
 			///////////////////////////////////
 std::string WrongAnimal::getType(void)const
 {
-	return (this->type);
+	return (this->_type);
+}
+
+void	WrongAnimal::setType(std::string type)
+{
+	this->_type = type;
+	return ;
 }
 
 void	WrongAnimal::makeSound(void) const
 {
-	std::cout << "This animal's sound is " << this->type << std::endl;
+	std::cout << "This " << this->_type << "'s sound is unknow..."<< std::endl;
 	return ;
 }

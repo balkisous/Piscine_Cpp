@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:15 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 14:53:16 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:04:47 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,45 +18,48 @@
 
 int main(void)
 {
-	const Animal* meta = new Animal();
-	std::cout << std::endl;
-	const Animal* dog = new Dog();
-	std::cout << std::endl;
-	const Animal* cat = new Cat();
-	std::cout << std::endl;
+	int		size = 4;
+	Animal	*tab[size];
+	int		i;
 
-	std::cout << meta->getType() << " " << std::endl;
-	std::cout << dog->getType() << " " << std::endl;
-	std::cout << cat->getType() << " " << std::endl;
+	i = 0;
+	std::cout << "----------Constructor----------" << std::endl;
+	while (i < size)
+	{
+		if (i >= 0 && i < (size / 2))
+			tab[i] = new Dog();
+		if (i >= (size / 2) && i < size)
+			tab[i] = new Cat();
+		std::cout << std::endl;
+		i++;
+	}
+	
+		std::cout << "----------Assignement------------------" << std::endl;
+	{
+		Dog a;
+		Dog b;
+		Dog c(a);
 
-	cat->makeSound();	//will output the cat sound!
-	dog->makeSound();	//will output the dog sound!
-	meta->makeSound();	//will output the meta sound!
+		b = a;
 
-	std::cout << std::endl;
-	delete meta;
-	std::cout << std::endl;
-	delete dog;
-	std::cout << std::endl;
-	delete cat;
+		std::cout << std::endl;
 
-	std::cout << std::endl << std::endl << "--------Wrong Exemple---------" << std::endl << std::endl << std::endl;
+		std::cout << a.getBrain() << std::endl;
+		std::cout << b.getBrain() << std::endl;
+		std::cout << c.getBrain() << std::endl;
 
-	const WrongAnimal* wmeta = new WrongAnimal();
-	std::cout << std::endl;
-	const WrongAnimal* wcat = new WrongCat();
-	std::cout << std::endl;
+		std::cout << std::endl;
 
-	std::cout << wmeta->getType() << " " << std::endl;
-	std::cout << wcat->getType() << " " << std::endl;
+	}
 
-	wcat->makeSound();	//will output the cat sound!
-	wmeta->makeSound();	//will output the meta sound!
-
-	std::cout << std::endl;
-	delete wmeta;
-	std::cout << std::endl;
-	delete wcat;
-
+		std::cout << std::endl;
+	std::cout << "----------Destructor----------" << std::endl;
+	i = 0;
+	while (i < size)
+	{
+		delete tab[i];
+		std::cout << std::endl;
+		i++;
+	}
 	return (0);
 }

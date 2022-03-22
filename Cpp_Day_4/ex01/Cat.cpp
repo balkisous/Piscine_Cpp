@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:05:55 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/21 14:36:06 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/22 13:50:38 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Cat::Cat(void)
+Cat::Cat(void) : Animal("Cat")
 {
 	std::cout << "Hello, i am Cat constructeur" <<std::endl;
-	this->type = "Miaaaoouu~";
+	this->id = new Brain();
 	return ;
 }
 
@@ -32,12 +32,18 @@ Cat::Cat(const Cat & rhs)
 Cat &Cat::operator=(const Cat &rhs)
 {
 	std::cout << "Hello, i am Cat operator assignment" << std::endl;
-	this->type = rhs.getType();
+	this->setType(rhs.getType());
 	return (*this);
 }
 
 Cat::~Cat(void)
 {
 	std::cout << "Hello, i am Cat Destructor" << std::endl;
+	delete this->id;
 	return ;
+}
+
+void	Cat::makeSound(void)const
+{
+	std::cout << this->getType() << "'s sound is Miaouuuw~" << std::endl;
 }
