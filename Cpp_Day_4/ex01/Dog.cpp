@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:20:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/22 15:02:06 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/23 18:00:20 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ Dog::Dog(void) : Animal("Dog")
 Dog::Dog(const Dog & rhs)
 {
 	std::cout << "Hello, i am Dog Copy Constructor" << std::endl;
-	*this = rhs;
+	this->setType(rhs.getType());
+	this->id = new Brain(*rhs.id);
 	return ;
 }
 

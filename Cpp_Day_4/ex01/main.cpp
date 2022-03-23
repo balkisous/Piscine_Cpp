@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:15 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/22 15:04:47 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/23 18:00:55 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,25 +34,7 @@ int main(void)
 		i++;
 	}
 	
-		std::cout << "----------Assignement------------------" << std::endl;
-	{
-		Dog a;
-		Dog b;
-		Dog c(a);
-
-		b = a;
-
-		std::cout << std::endl;
-
-		std::cout << a.getBrain() << std::endl;
-		std::cout << b.getBrain() << std::endl;
-		std::cout << c.getBrain() << std::endl;
-
-		std::cout << std::endl;
-
-	}
-
-		std::cout << std::endl;
+	std::cout << std::endl;
 	std::cout << "----------Destructor----------" << std::endl;
 	i = 0;
 	while (i < size)
@@ -61,5 +43,24 @@ int main(void)
 		std::cout << std::endl;
 		i++;
 	}
+	
+		std::cout << "----------Assignement------------------" << std::endl;
+	{
+		Dog a;
+		Dog b;
+		Dog c(a);
+		std::cout << std::endl << std::endl;
+		
+		b = a;
+
+		std::cout << std::endl;
+
+		std::cout << "l'adresse du Dog a = " << a.getBrain() << std::endl;
+		std::cout << "l'adresse du Dog b = " << b.getBrain() << std::endl;
+		std::cout << "l'adresse du Dog c = " << c.getBrain() << std::endl;
+
+		std::cout << std::endl;
+	}
+
 	return (0);
 }

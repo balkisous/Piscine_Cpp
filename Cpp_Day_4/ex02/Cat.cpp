@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:05:55 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/23 11:40:19 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/23 18:07:59 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Cat::Cat(void) : AAnimal("Cat")
+Cat::Cat(void) : Animal("Cat")
 {
 	std::cout << "Hello, i am Cat constructeur" <<std::endl;
 	this->id = new Brain();
@@ -25,7 +25,8 @@ Cat::Cat(void) : AAnimal("Cat")
 Cat::Cat(const Cat & rhs)
 {
 	std::cout << "Hello, i am Cat Copy Constructor" << std::endl;
-	*this = rhs;
+	this->setType(rhs.getType());
+	this->id = new Brain(*rhs.id);
 	return ;
 }
 
