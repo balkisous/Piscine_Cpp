@@ -3,15 +3,15 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
+#    By: balkis <balkis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/03/22 15:13:17 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/03/23 11:41:24 by balkis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS 	=	main.cpp \
-			Animal.cpp \
+			AAnimal.cpp \
 			Cat.cpp \
 			Dog.cpp \
 			WrongCat.cpp \

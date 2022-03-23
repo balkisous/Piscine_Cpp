@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:05:55 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/22 13:50:38 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/23 11:40:19 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Cat::Cat(void) : Animal("Cat")
+Cat::Cat(void) : AAnimal("Cat")
 {
 	std::cout << "Hello, i am Cat constructeur" <<std::endl;
 	this->id = new Brain();
@@ -33,6 +33,8 @@ Cat &Cat::operator=(const Cat &rhs)
 {
 	std::cout << "Hello, i am Cat operator assignment" << std::endl;
 	this->setType(rhs.getType());
+	delete this->id;
+	this->id = new Brain(*rhs.id);
 	return (*this);
 }
 

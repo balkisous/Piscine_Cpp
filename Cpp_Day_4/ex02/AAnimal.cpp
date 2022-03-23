@@ -3,68 +3,68 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:27 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/22 09:45:08 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/23 11:39:12 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Animal::Animal(void)
+AAnimal::AAnimal(void)
 {
-	std::cout << "Hello, i am Animal Constructor" << std::endl;
-	//this->_type = "Unknow sound from this animal...";
-	this->_type = "Animal";
+	std::cout << "Hello, i am AAnimal Constructor" << std::endl;
+	//this->_type = "Unknow sound from this AAAnimal...";
+	this->_type = "AAnimal";
 	return ;
 }
 
-Animal::Animal(std::string type)
+AAnimal::AAnimal(std::string type)
 {
-	std::cout << "Hello, i am Animal String Constructor" << std::endl;
+	std::cout << "Hello, i am AAnimal String Constructor" << std::endl;
 	this->_type = type;
 	return ;
 }
 
-Animal::Animal(const Animal & rhs)
+AAnimal::AAnimal(const AAnimal & rhs)
 {
-	std::cout << "Hello, i am Animal Copy Constructor" << std::endl;
+	std::cout << "Hello, i am AAnimal Copy Constructor" << std::endl;
 	*this = rhs;
 	return ;
 }
 
-Animal &Animal::operator=(const Animal &rhs)
+AAnimal &AAnimal::operator=(const AAnimal &rhs)
 {
-	std::cout << "Hello, i am Animal operator assignment" << std::endl;
+	std::cout << "Hello, i am AAnimal operator assignment" << std::endl;
 	this->_type = rhs.getType();
 	return (*this);
 }
 
-Animal::~Animal(void)
+AAnimal::~AAnimal(void)
 {
-	std::cout << "Hello, i am Animal Destructor" << std::endl;
+	std::cout << "Hello, i am AAnimal Destructor" << std::endl;
 	return ;
 }
 
 			///////////////////////////////////
 			///			Function			///
 			///////////////////////////////////
-std::string Animal::getType(void)const
+std::string AAnimal::getType(void)const
 {
 	return (this->_type);
 }
 
-void	Animal::setType(std::string type)
+void	AAnimal::setType(std::string type)
 {
 	this->_type = type;
 	return ;
 }
 
-void	Animal::makeSound(void) const
+void	AAnimal::makeSound(void) const
 {
 	std::cout << "This " << this->_type << "'s sound is unknow..."<< std::endl;
 	return ;

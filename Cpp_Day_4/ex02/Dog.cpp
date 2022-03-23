@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:20:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/22 15:02:06 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/23 11:40:55 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Dog::Dog(void) : Animal("Dog")
+Dog::Dog(void) : AAnimal("Dog")
 {
 	std::cout << "Hello, i am Dog constructeur" <<std::endl;
 	this->id = new Brain();

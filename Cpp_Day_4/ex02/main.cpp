@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 11:30:15 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/22 15:12:43 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/23 11:39:02 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
@@ -18,11 +18,11 @@
 
 int main(void)
 {
-	//	const Animal* meta = new Animal();
+	//const AAnimal* meta = new AAnimal();
 	std::cout << std::endl;
-	const Animal* dog = new Dog();
+	const AAnimal* dog = new Dog();
 	std::cout << std::endl;
-	const Animal* cat = new Cat();
+	const AAnimal* cat = new Cat();
 	std::cout << std::endl;
 
 	//std::cout << meta->getType() << " " << std::endl;
