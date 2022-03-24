@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:41:50 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/24 08:47:37 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/24 11:44:18 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,6 @@ void	Bureaucrat::high(int i)
 {
 	try
 	{
-		//std::cout << "le resultat du calcule est " << this->_Grade - i << std::endl;
 		if (this->_Grade - i <= 0)
 			throw std::exception();
 		else
@@ -118,6 +117,14 @@ void	Bureaucrat::GradeTooHighException(void)
 void	Bureaucrat::GradeTooLowException(void)
 {
 	std::cout << "Invalid!, You're Grade it's too low to be affect" << std::endl;
+}
+
+void	Bureaucrat::signForm(const Form & fr)
+{
+	if (fr.getSign() == true)
+		std::cout << this->_Name << " signed " << fr.getName() << std::endl;
+	else
+		std::cout << this->_Name << "couldn't sign " << fr.getName() << "because not already sign" << std::endl;	
 }
 
 std::ostream & operator << (std::ostream & cout, const Bureaucrat & rhs)
