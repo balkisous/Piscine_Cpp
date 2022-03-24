@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:20:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/23 18:00:20 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/24 07:34:35 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Dog::Dog(void) : Animal("Dog")
+Dog::Dog(void) : AAnimal("Dog")
 {
 	std::cout << "Hello, i am Dog constructeur" <<std::endl;
 	this->id = new Brain();

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 12:05:55 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/23 18:07:59 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/24 07:34:29 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 			///////////////////////////////////
 			///			Canonical			///
 			///////////////////////////////////
-Cat::Cat(void) : Animal("Cat")
+Cat::Cat(void) : AAnimal("Cat")
 {
 	std::cout << "Hello, i am Cat constructeur" <<std::endl;
 	this->id = new Brain();
