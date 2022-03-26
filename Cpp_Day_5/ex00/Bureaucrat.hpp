@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:38:40 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/24 08:23:02 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/26 12:51:20 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ class	Bureaucrat
 			void			setGrade(unsigned int grade);
 
 					//ft_base
-			void	high(int i);
-			void	low(int i);
+			void	increment(void);
+			void	decrement(void);
 			void	GradeTooHighException(void);
 			void	GradeTooLowException(void);
 

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:41:50 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/24 08:47:37 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/26 12:48:33 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,15 +79,14 @@ void	Bureaucrat::setGrade(unsigned int grade)
 		this->_Grade = grade;
 }
 
-void	Bureaucrat::high(int i)
+void	Bureaucrat::increment(void)
 {
 	try
 	{
-		//std::cout << "le resultat du calcule est " << this->_Grade - i << std::endl;
-		if (this->_Grade - i <= 0)
+		if (this->_Grade - 1 <= 0)
 			throw std::exception();
 		else
-			this->_Grade -= i;
+			this->_Grade -= 1;
 	}
 	catch (std::exception e)
 	{
@@ -95,14 +94,14 @@ void	Bureaucrat::high(int i)
 	}
 }
 
-void	Bureaucrat::low(int i)
+void	Bureaucrat::decrement(void)
 {
 	try
 	{
-		if (this->_Grade + i > 150)
+		if (this->_Grade + 1 > 150)
 			throw std::exception();
 		else
-			this->_Grade += i;
+			this->_Grade += 1;
 	}
 	catch (std::exception e)
 	{

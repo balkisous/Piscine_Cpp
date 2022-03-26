@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:45:56 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/24 08:31:39 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/26 12:54:44 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,22 @@ int main(void)
 
 	std::cout << "-----HIGH-----" << std::endl;
 	std::cout << bur;
-	bur.high(5);	
+	bur.increment();
 	std::cout << bur;
-	bur.high(92);
+	bur.increment();
+	std::cout << bur;
+	bur.setGrade(1);
+	std::cout << bur;
+	bur.increment();
 	std::cout << bur << std::endl;
 	std::cout << "-----LOW-----" << std::endl;
-	bur.low(10);
+	bur.decrement();
 	std::cout << bur;
-	bur.low(180);
+	bur.decrement();
+	std::cout << bur;
+	bur.setGrade(150);
+	std::cout << bur;
+	bur.decrement();
 	std::cout << bur << std::endl;
 
 	return (0);
