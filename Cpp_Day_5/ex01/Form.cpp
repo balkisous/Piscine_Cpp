@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 07:31:11 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 10:02:55 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 13:14:14 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ std::ostream & operator << (std::ostream & cout, const Form & rhs)
 	// c’est-à-dire des instructions de la forme :
 	// sortie << ..... ;
 	cout << "Name is " << rhs.getnameform() << std::endl;
-	if (rhs.getSign() == 0)
+	if (rhs.getSign() == false)
 		cout << "Sign is not signed..." << std::endl;
 	else
 		cout << "Sign is signed!!" << std::endl;

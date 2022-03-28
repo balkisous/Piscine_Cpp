@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:45:56 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 10:08:06 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 13:21:21 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,31 @@ int main(void)
 	std::cout << bur << std::endl;
 
 	std::cout << "-------be sign-------" << std::endl;
-	form.beSigned(bur);
+	try{	
+		form.beSigned(bur);
+	}
+	catch (std::exception e){
+		e.what();
+	}
+	std::cout << form << std::endl;
+
+
+	std::cout << "-------be sign2-------" << std::endl;
+	try{
+		form.beSigned(bur);
+	}
+	catch (std::exception e){
+		e.what();
+	}
 	std::cout << form << std::endl;
 
 	std::cout << "-------sign form-------" << std::endl;
-	bur.signForm(form);
+	try{
+		bur.signForm(form);
+	}
+	catch (std::exception e){
+		e.what();
+	}
 	std::cout << bur << std::endl;
 	return (0);
 }
