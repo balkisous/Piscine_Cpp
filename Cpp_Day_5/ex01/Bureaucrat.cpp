@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:41:50 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/24 11:44:18 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 10:14:21 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,14 +79,14 @@ void	Bureaucrat::setGrade(unsigned int grade)
 		this->_Grade = grade;
 }
 
-void	Bureaucrat::high(int i)
+void	Bureaucrat::increment(void)
 {
 	try
 	{
-		if (this->_Grade - i <= 0)
+		if (this->_Grade - 1 <= 0)
 			throw std::exception();
 		else
-			this->_Grade -= i;
+			this->_Grade -= 1;
 	}
 	catch (std::exception e)
 	{
@@ -94,14 +94,14 @@ void	Bureaucrat::high(int i)
 	}
 }
 
-void	Bureaucrat::low(int i)
+void	Bureaucrat::decrement(void)
 {
 	try
 	{
-		if (this->_Grade + i > 150)
+		if (this->_Grade + 1 > 150)
 			throw std::exception();
 		else
-			this->_Grade += i;
+			this->_Grade += 1;
 	}
 	catch (std::exception e)
 	{
@@ -119,12 +119,25 @@ void	Bureaucrat::GradeTooLowException(void)
 	std::cout << "Invalid!, You're Grade it's too low to be affect" << std::endl;
 }
 
-void	Bureaucrat::signForm(const Form & fr)
+void	Bureaucrat::signForm(Form & fr)
 {
-	if (fr.getSign() == true)
-		std::cout << this->_Name << " signed " << fr.getName() << std::endl;
-	else
-		std::cout << this->_Name << "couldn't sign " << fr.getName() << "because not already sign" << std::endl;	
+	std::cout << "Hello i am is sign Form function!!" << std::endl;
+	try
+	{
+		std::cout << "before be sign in form sign\n";
+		fr.beSigned(*this);
+		std::cout << "after be sign in form sign\n";
+	}
+	catch(std::exception & e)
+	{
+		// si dans la fonction besign le programe est passé dans
+		// un des cas avec gradetoolow ou aaalready sign
+		// on va catcher l'execpetion ici
+		std::cout << "here" << std::endl;
+		std::cout << this->_Name << " cannot sign because " << e.what() << std::endl;
+		return ;
+	}
+	std::cout << this->_Name << " signes " << fr.getnameform() << std::endl;
 }
 
 std::ostream & operator << (std::ostream & cout, const Bureaucrat & rhs)

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:38:40 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/24 11:48:06 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 08:57:04 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 #include "Form.hpp"
 
-class	Form;
+class Form;
 
 class	Bureaucrat
 {
@@ -36,11 +36,12 @@ class	Bureaucrat
 			void			setGrade(unsigned int grade);
 
 					//ft_base
-			void	high(int i);
-			void	low(int i);
+			void	increment(void);
+			void	decrement(void);
 			void	GradeTooHighException(void);
 			void	GradeTooLowException(void);
-			void	signForm(const Form & fr);
+			void	signForm(Form & fr);
+
 			
 			//Destructeur
 			~Bureaucrat(void);							//canonical destructeur

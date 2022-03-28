@@ -5,56 +5,57 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/24 08:45:15 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/24 11:56:21 by bben-yaa         ###   ########.fr       */
+/*   Created: 2022/03/28 07:31:11 by bben-yaa          #+#    #+#             */
+/*   Updated: 2022/03/28 10:02:55 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-			////////////////////////////////
-			///			Canonical		///
-			///////////////////////////////
-
-Form::Form(void) : _Name("Formulaire"), _Sgrade(50), _Egrade(25)
+Form::Form(void) : _Name("Unknow"), _Sign(false), _Sgrade(20), _Egrade(10)
 {
-	std::cout << "Hello, i am Form Constructor" << std::endl;
-	this->_Sign = false;
-	return ;
+	std::cout << "Hello i am Form Constructor" << std::endl;
+}
+Form::Form(std::string name, bool sign, int sgrade, int egrade) : _Name(name), _Sign(sign), _Sgrade(sgrade), _Egrade(egrade)
+{
+	std::cout << "Hello i am Form Params Constructor" << std::endl;
 }
 
-Form::Form(const Form & rhs) : _Name("Formulaire"), _Sgrade(50), _Egrade(25)
+Form::Form(const Form & rhs) : _Sgrade(20), _Egrade(10)
 {
-	std::cout << "Hello, i am Form Copy Constructor" << std::endl;
-	this->_Sign = false;
+	std::cout << "Hello i am Form Copy Constructor" << std::endl;
 	*this = rhs;
-	return ;
 }
 
 Form &Form::operator=(const Form & rhs)
 {
-	std::cout << "Hello, i am Form operator assignment" << std::endl;
-	this->_Name = rhs.getName();
-	this->_Sign = rhs.getSign();
-	this->_Sgrade = rhs.getSgrade();
-	this->_Egrade = rhs.getEgrade();
-	/*assigner les valeur rhs dans this*/
-	*this = rhs;
+	std::cout << "Hello i am Form operator assignement" << std::endl;
+	this->setName(rhs.getnameform());
+	this->setSign(rhs.getSign());
 	return (*this);
 }
 
 Form::~Form(void)
 {
-	std::cout << "Hello, i am Form Destructor" << std::endl;
-	return ;
+	std::cout << "Hello i am Form Destructor" << std::endl;
+}
+			///////////////////////////////////
+			///			Fonction			///
+			///////////////////////////////////
+
+			//.............set................//
+void	Form::setName(std::string name)
+{
+	this->_Name = name;
 }
 
-			////////////////////////////////
-			///			Fonction		////
-			////////////////////////////////
+void	Form::setSign(bool sign)
+{
+	this->_Sign = sign;
+}
 
-			/*-----------GET-----------*/
-std::string	Form::getName(void)const
+			//.............get................//
+std::string	Form::getnameform(void) const
 {
 	return (this->_Name);
 }
@@ -74,75 +75,16 @@ int		Form::getEgrade(void) const
 	return (this->_Egrade);
 }
 
-			/*-----------SET-----------*/
-void	Form::setName(std::string name)
+void	Form::beSigned(Bureaucrat bur)
 {
-	this->_Name = name;
-}
-
-void 	Form::setSgrade(unsigned int grade)
-{
-	if (grade <= 150 && grade > 0)
-		this->_Sgrade = grade;
+	std::cout << "Form function beSigned called" << std::endl;
+	if (bur.getGrade() > (unsigned int)this->_Sgrade)
+		throw Form::GradeTooLowException();
+	else if (this->_Sign == true)
+		throw Form::FormAlreadySignedException();
 	else
-		std::cout << "This grade is invalid to initialize the Sgrade" << std::endl;
-}
-
-void 	Form::setEgrade(unsigned int grade)
-{
-	if (grade <= 150 && grade > 0)
-		this->_Egrade = grade;
-	else
-		std::cout << "This grade is invalid to initialize the Sgrade" << std::endl;
-}
-
-		/*-----------function------------------*/
-void	Form::high(int i, int min, int grade)
-{
-	try
-	{
-		if (grade - i <= min)
-			throw std::exception();
-		else
-			grade -= i;
-	}
-	catch (std::exception e)
-	{
-		this->GradeTooHighException();
-	}
-}
-
-void	Form::low(int i, int max, int grade)
-{
-	try
-	{
-		if (grade + i > max)
-			throw std::exception();
-		else
-			grade += i;
-	}
-	catch (std::exception e)
-	{
-		this->GradeTooLowException();
-	}
-}
-
-void	Form::GradeTooHighException(void)
-{
-	std::cout << "Invalid!, You're Grade it's too high to be affect" << std::endl;
-}
-
-void	Form::GradeTooLowException(void)
-{
-	std::cout << "Invalid!, You're Grade it's too low to be affect" << std::endl;
-}
-
-void	Form::beSigned(Bureaucrat br)
-{
-	if ((int)br.getGrade() >= (int)this->_Sgrade)
 		this->_Sign = true;
-	else
-		this->low(br.getGrade(), this->_Sgrade, this->_Egrade);
+	std::cout << "This Form is signed successfuly" << std::endl;
 }
 
 std::ostream & operator << (std::ostream & cout, const Form & rhs)
@@ -151,7 +93,7 @@ std::ostream & operator << (std::ostream & cout, const Form & rhs)
 	// les possibilités classiques de << pour les types de base
 	// c’est-à-dire des instructions de la forme :
 	// sortie << ..... ;
-	cout << "Name is " << rhs.getName() << std::endl;
+	cout << "Name is " << rhs.getnameform() << std::endl;
 	if (rhs.getSign() == 0)
 		cout << "Sign is not signed..." << std::endl;
 	else
