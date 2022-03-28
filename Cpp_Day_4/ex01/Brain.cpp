@@ -43,7 +43,7 @@ Brain &Brain::operator=(const Brain &rhs)
 {
 	std::cout << "Hello, i am Brain operator assignment" << std::endl;
 	int i = 0;
-	while (i < 0)
+	while (i <= 100)
 	{
 		this->ideas[i] = rhs.ideas[i];
 	}
