@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 07:23:30 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 18:22:46 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:21:20 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ class Form
 			int			getSgrade(void)const;
 			int			getEgrade(void)const;
 				//ft_set
-			void		setName(std::string const name);
 			void		setSign(bool sign);
 
 
@@ -75,7 +74,7 @@ class Form
 	private:
 	
 		//Variable
-		std::string			_Name;
+		std::string	const		_Name;
 		bool				_Sign;
 		const int			_Sgrade;
 		const int			_Egrade;

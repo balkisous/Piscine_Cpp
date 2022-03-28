@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 07:23:30 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 13:38:10 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:17:49 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Form
 	public:
 			//Constructor
 			Form(void);							//canonical constructeur par defaut
-			Form(std::string name, bool sign, int sgrade, int egrade);
+			Form(std::string name, int sgrade, int egrade);
 			Form(Form const & rhs);				//canonical constructeur de recopie
 			
 			//Fomction
@@ -32,7 +32,6 @@ class Form
 			int			getSgrade(void)const;
 			int			getEgrade(void)const;
 				//ft_set
-			void		setName(std::string const name);
 			void		setSign(bool sign);
 
 
@@ -72,7 +71,7 @@ class Form
 	private:
 	
 		//Variable
-		std::string			_Name;
+		std::string	const		_Name;
 		bool				_Sign;
 		const int			_Sgrade;
 		const int			_Egrade;

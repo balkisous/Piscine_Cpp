@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 07:31:11 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 13:14:14 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:18:06 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ Form::Form(void) : _Name("Unknow"), _Sign(false), _Sgrade(20), _Egrade(10)
 {
 	std::cout << "Hello i am Form Constructor" << std::endl;
 }
-Form::Form(std::string name, bool sign, int sgrade, int egrade) : _Name(name), _Sign(sign), _Sgrade(sgrade), _Egrade(egrade)
+Form::Form(std::string name, int sgrade, int egrade) : _Name(name), _Sign(false), _Sgrade(sgrade), _Egrade(egrade)
 {
 	std::cout << "Hello i am Form Params Constructor" << std::endl;
 }
@@ -30,7 +30,6 @@ Form::Form(const Form & rhs) : _Sgrade(20), _Egrade(10)
 Form &Form::operator=(const Form & rhs)
 {
 	std::cout << "Hello i am Form operator assignement" << std::endl;
-	this->setName(rhs.getnameform());
 	this->setSign(rhs.getSign());
 	return (*this);
 }
@@ -44,10 +43,6 @@ Form::~Form(void)
 			///////////////////////////////////
 
 			//.............set................//
-void	Form::setName(std::string name)
-{
-	this->_Name = name;
-}
 
 void	Form::setSign(bool sign)
 {

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:41:50 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/26 12:48:33 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:13:25 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@
 			///			Canonical			///
 			///////////////////////////////////
 
-Bureaucrat::Bureaucrat(void)
+Bureaucrat::Bureaucrat(void) :  _Name("Unknow")
 {
 	std::cout << "Hello, i am Bureaucrat Constuctor" << std::endl;
-	this->_Name = "Unknow";
 	this->_Grade = 150;
 	return ;
 }
@@ -40,7 +39,6 @@ Bureaucrat::Bureaucrat(const Bureaucrat & rhs)
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat & rhs)
 {
 	std::cout << "Hello, i am Bureaucrat operator assignment" << std::endl;
-	this->_Name = rhs.getName();
 	this->_Grade = rhs.getGrade();
 	/*assigner les valeur rhs dans this*/
 	return (*this);
@@ -64,11 +62,6 @@ std::string	Bureaucrat::getName(void)const
 unsigned int	Bureaucrat::getGrade(void)const
 {
 	return (this->_Grade);
-}
-
-void	Bureaucrat::setName(std::string name)
-{
-	this->_Name = name;
 }
 
 void	Bureaucrat::setGrade(unsigned int grade)

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:38:40 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/26 12:51:20 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:12:46 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class	Bureaucrat
 			std::string		getName(void)const;
 			unsigned int	getGrade(void)const;
 					//ft_set
-			void			setName(std::string name);
 			void			setGrade(unsigned int grade);
 
 					//ft_base
@@ -45,7 +44,7 @@ class	Bureaucrat
 	protected:
 
 	private:
-		std::string		_Name;
+		std::string	const	_Name;
 		int				_Grade;
 };
 

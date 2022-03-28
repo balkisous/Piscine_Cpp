@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 07:31:11 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 19:00:13 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 19:21:03 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ Form::Form(const Form & rhs) : _Sgrade(20), _Egrade(10)
 Form &Form::operator=(const Form & rhs)
 {
 	std::cout << "Hello i am Form operator assignement" << std::endl;
-	this->setName(rhs.getnameform());
 	this->setSign(rhs.getSign());
 	return (*this);
 }
@@ -44,10 +43,6 @@ Form::~Form(void)
 			///////////////////////////////////
 
 			//.............set................//
-void	Form::setName(std::string name)
-{
-	this->_Name = name;
-}
 
 void	Form::setSign(bool sign)
 {
