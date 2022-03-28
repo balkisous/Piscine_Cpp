@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:41:50 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 13:15:57 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 13:34:26 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,23 +121,15 @@ void	Bureaucrat::GradeTooLowException(void)
 
 void	Bureaucrat::signForm(Form & fr)
 {
-	std::cout << "Hello i am is sign form Bureaucrat function!!" << std::endl;
-	try
-	{
-		std::cout << "before be sign in form sign\n";
+	std::cout << "Hello i am is sign form Bureaucrat function" << std::endl;
+	try{
 		fr.beSigned(*this);
-		std::cout << "after be sign in form sign\n";
-		// if (this->_Grade == 0)
-		// 	std::cout << "happy haha" << std::endl;
-		// else
-		// 	throw std::exception();
 	}
-	catch(std::exception e)
+	catch(std::exception & e)
 	{
 		// si dans la fonction besign le programe est passé dans
 		// un des cas avec gradetoolow ou aaalready sign
 		// on va catcher l'execpetion ici
-		std::cout << "Here because we throw" << std::endl;
 		std::cout << this->_Name << " cannot sign because " << e.what() << std::endl;
 		return ;
 	}

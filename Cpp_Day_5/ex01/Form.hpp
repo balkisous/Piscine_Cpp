@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 07:23:30 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 12:10:09 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/28 13:38:10 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,14 @@ class Form
 	{
 		virtual const char * what() const throw()
 		{
-			return ("This form is not signed yet");
+			return ("------This form is not signed yet----");
 		}
 	};
 	class FormAlreadySignedException: public std::exception
 	{
 		virtual const char * what() const throw()
 		{
-			return ("This form is already signed.");
+			return ("------This form is already signed----");
 		}
 	};
 
