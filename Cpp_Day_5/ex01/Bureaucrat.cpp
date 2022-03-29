@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:41:50 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 19:15:30 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/29 13:55:10 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,12 @@ Bureaucrat::Bureaucrat(void) : _Name("Unknow")
 	return ;
 }
 
-Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : _Name(name), _Grade(grade)
+Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : _Name(name)
 {
+	if (grade > 0 && grade <= 150)
+		this->_Grade = grade;
+	else
+		this->_Grade = 150;
 	std::cout << "Hello, i am Bureaucrat params Constructor" << std::endl;
 	return ;
 }
