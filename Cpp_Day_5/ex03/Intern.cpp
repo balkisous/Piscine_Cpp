@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:43:38 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/29 15:51:27 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/29 16:04:59 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,17 @@ Intern::~Intern(void)
 
 Form		* Intern::makeForm(std::string nameform, std::string targetform)
 {
-		
+	if (nameform != "robotomy request" && nameform != "shrubberycreation request" && nameform != "presidentialpardon request")	
+		return(std::cout << "This Form is invalid !!" << std::endl); 
+	std::string	form[3]					= {"robotomy request", "shrubberycreation request", "presidentialpardon request"};	//-> tab string de tout les formulaires
+	void (Form::*ft_ptr[3]) () const	= {& Form::RobotomyRequestForm, &Form::ShrubberyCreationForm, &Form::PresidentialPardonForm}; //-> tab pointeur des trois classes dérivé de Form 
+	int	i 								= 0;
+	while (i < 4)
+	{
+		if (nameform == form[i])
+			(this->*ft_ptr[i])();
+		i++;
+	}
 }
 
 std::ostream & operator << (std::ostream & cout, const Intern & rhs)

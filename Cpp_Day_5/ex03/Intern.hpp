@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:42:07 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/29 15:50:57 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/29 16:03:06 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 #include <stdexcept>
 #include <iostream>
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
 
 class	Intern
 {
+	typedef void(Form::*ft_ptr)(void) const;	//definition d'un nouveau type de variable
 	public:
 			//Constructor
 			Intern(void);							//canonical constructeur par defaut
