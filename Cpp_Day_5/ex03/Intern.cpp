@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:43:38 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/29 16:04:59 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/30 12:12:19 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Intern::Intern(const Intern & rhs)
 Intern &Intern::operator=(const Intern & rhs)
 {
 	std::cout << "Hello, i am Intern operator assignment" << std::endl;
+	(void)rhs;
 	/*assigner les valeur rhs dans this*/
 	return (*this);
 }
@@ -48,17 +49,31 @@ Intern::~Intern(void)
 
 Form		* Intern::makeForm(std::string nameform, std::string targetform)
 {
-	if (nameform != "robotomy request" && nameform != "shrubberycreation request" && nameform != "presidentialpardon request")	
-		return(std::cout << "This Form is invalid !!" << std::endl); 
-	std::string	form[3]					= {"robotomy request", "shrubberycreation request", "presidentialpardon request"};	//-> tab string de tout les formulaires
-	void (Form::*ft_ptr[3]) () const	= {& Form::RobotomyRequestForm, &Form::ShrubberyCreationForm, &Form::PresidentialPardonForm}; //-> tab pointeur des trois classes dérivé de Form 
-	int	i 								= 0;
-	while (i < 4)
+	if (nameform != "robotomy request" && nameform != "shrubberycreation request" && nameform != "presidentialpardon request")
 	{
-		if (nameform == form[i])
-			(this->*ft_ptr[i])();
+		std::cout << "This Form is invalid !!" << std::endl; 
+		return NULL;
+	}
+	std::string	form[3]					= { "robotomy request", "shrubberycreation request", "presidentialpardon request"};	//-> tab string de tout les formulaires
+	Form *ft_ptr[3]						= { new RobotomyRequestForm(targetform), new ShrubberyCreationForm(targetform), new PresidentialPardonForm(targetform)}; //-> tab pointeur des trois classes dérivé de Form 
+	int	i 								= 0;
+	while (i < 3)
+	{
+		if (nameform != form[i])
+			delete ft_ptr[i];
 		i++;
 	}
+	i = 0;
+	while (i < 3)
+	{
+		if (nameform == form[i])
+			return (ft_ptr[i]);
+		i++;
+	}
+	i = 0;
+	while (i++ < 3)
+		delete ft_ptr[i];
+	return (NULL);
 }
 
 std::ostream & operator << (std::ostream & cout, const Intern & rhs)
@@ -67,6 +82,6 @@ std::ostream & operator << (std::ostream & cout, const Intern & rhs)
 	// les possibilités classiques de << pour les types de base
 	// c’est-à-dire des instructions de la forme :
 	// sortie << ..... ;
-
+	(void)rhs;
 	return (cout);
 }

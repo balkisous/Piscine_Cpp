@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:42:07 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/29 16:03:06 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/30 11:26:30 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,13 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 
+class	RobotomyRequestForm;
+class	SchruberryCreationForm;
+class	PresidentialPardonForm;
 
 class	Intern
 {
-	typedef void(Form::*ft_ptr)(void) const;	//definition d'un nouveau type de variable
+	typedef void(Form::*ft_ptr)(void);	//definition d'un nouveau type de variable
 	public:
 			//Constructor
 			Intern(void);							//canonical constructeur par defaut
