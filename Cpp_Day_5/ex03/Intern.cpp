@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:43:38 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/30 12:12:19 by balkis           ###   ########.fr       */
+/*   Updated: 2022/03/30 19:12:20 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,12 @@ Form		* Intern::makeForm(std::string nameform, std::string targetform)
 	while (i < 3)
 	{
 		if (nameform == form[i])
+		{
+			std::cout << "Intern creates " << form[i] << std::endl;
 			return (ft_ptr[i]);
+		}
 		i++;
 	}
-	i = 0;
-	while (i++ < 3)
-		delete ft_ptr[i];
 	return (NULL);
 }
 
