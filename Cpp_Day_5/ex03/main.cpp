@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 07:45:56 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/28 18:54:51 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/03/30 12:23:25 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,17 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
-	Bureaucrat					bur("Martin", 20);
+	Intern someRandomIntern;
+	Form* rrf;
+
+	rrf = someRandomIntern.makeForm("PomPom", "Bender");
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	delete rrf;
+/*	Bureaucrat					bur("Martin", 20);
 	std::cout << std::endl;
 	ShrubberyCreationForm		shru("My Target");
 	std::cout << std::endl;
@@ -71,7 +78,7 @@ int main(void)
 	}
 	bur.executeForm(bot);
 	std::cout << bot << std::endl << std::endl;
-
+*/
 
 	return (0);
 }
