@@ -6,13 +6,14 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/03/24 07:47:03 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/03/31 18:34:40 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS 	=	main.cpp \
-			Bureaucrat.cpp
-EXEC	= integer
+			Convert.cpp
+
+MEGA	= convert
 
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
@@ -22,16 +23,16 @@ FLAGS	= -Wall -Werror -Wextra -std=c++98
 %.o : %.cpp
 	$(CC) -c $(CFLAGS) $(FLAGS) -o $@ $<
 				
-${EXEC}:	${OBJ}
-			$(CC) ${FLAGS} ${OBJ}
+${MEGA}:	${OBJ}
+			$(CC) ${FLAGS} ${OBJ} -o ${MEGA}
 
-all		: ${EXEC}
+all		: ${MEGA}
 
 clean	:
 				${RM} ${OBJ}
 
 fclean	:	clean
-				${RM} ./a.out
+				${RM} ${MEGA}
 
 re		:	fclean all
 
