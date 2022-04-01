@@ -6,14 +6,14 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/03/31 18:34:40 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/04/01 10:18:44 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS 	=	main.cpp \
+SRCS 	= main.cpp \
 			Convert.cpp
 
-MEGA	= convert
+MEGA	= Convert
 
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
