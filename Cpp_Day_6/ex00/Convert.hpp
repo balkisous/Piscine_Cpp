@@ -6,13 +6,14 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:42:07 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/03/31 17:51:04 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/04/01 10:06:33 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <stdexcept>
+#include <stdlib.h>
 #include <ctype.h>
 #include <iostream>
 
@@ -59,12 +60,11 @@ class	Convert
 	protected:
 
 	private:
-		char	*arg;
-		char	c;
-		int		i;
-		float	f;
-		double	d;
-
+		char		*arg;
+		char		c;
+		int			i;
+		float		f;
+		double		d;
 };
 
 	std::ostream & operator << (std::ostream & sortie, Convert & rhs);
