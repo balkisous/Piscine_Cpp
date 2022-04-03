@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 11:24:26 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/04/03 14:39:06 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/04/03 23:50:35 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@
 int main (void)
 {
 	std::cout << ".........Int........." << std::endl;
-	Array<int> intArray(3);
+	Array<int>	intArray(3);
 	intArray[0] = 10;
 	intArray[1] = 20;
 	intArray[2] = 30;
+
 
 	std::cout << intArray << std::endl;
 	Array<int> intcopy(intArray);
@@ -35,6 +36,9 @@ int main (void)
 		std::cout << e.what() << std::endl;
 	}
 	std::cout << intArray << std::endl;
+	Array<int>	intArray2;
+	intArray2 = intArray;
+	std::cout << intArray2 << std::endl;
 
 
 	std::cout << std::endl << ".........String........." << std::endl;

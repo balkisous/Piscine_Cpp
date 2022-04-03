@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: balkis <balkis@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:05:10 by balkis            #+#    #+#             */
-/*   Updated: 2022/04/03 14:36:54 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/04/03 23:47:39 by balkis           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ Array<T>::Array(Array const & rhs)
 	for (unsigned int i = 0; i < rhs._size; i++)
 		this->array[i] = rhs.array[i];	
 }
-/*
+
 template<typename T>
-Array	&Array<T>::operator=(const Array & rhs)
+Array<T>	&Array<T>::operator=(const Array & rhs)
 {
 	std::cout << "Array operator assignement" << std::endl;
 	if (this->_size != 0 && this->_size != rhs.size())
@@ -83,7 +83,7 @@ Array	&Array<T>::operator=(const Array & rhs)
 		this->array[i] = rhs.array[i];	
 	return (*this);
 }
-*/
+
 template <typename T>
 T & Array<T>::operator[](unsigned int pos) const
 {

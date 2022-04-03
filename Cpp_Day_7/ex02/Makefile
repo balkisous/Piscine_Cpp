@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
+#    By: balkis <balkis@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/04/02 12:36:54 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/04/03 23:51:42 by balkis           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ EXEC	= exec
 OBJ		= $(SRCS:.cpp=.o)
 RM		= rm -rf
 CC		= c++
-FLAGS	= -Wall -Werror -Wextra -std=c++98
+FLAGS	= -Wall -Werror -Wextra -std=c++98 #-fsanitize=address
 
 %.o : %.cpp
 	$(CC) -c $(CFLAGS) $(FLAGS) -o $@ $<
