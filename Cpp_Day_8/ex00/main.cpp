@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 11:37:13 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/04/04 14:14:14 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/04/04 14:23:40 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(void)
 
 	std::vector<int> v;
 	// on crée un vector de type int
+	// https://www.geeksforgeeks.org/initialize-a-vector-in-cpp-different-ways/
 	std::cout << "Size of my vector is " << sizeof(v) << " -> par defaut c'est 24" << std::endl;
 	std::cout << "v.size() = " << v.size() << " -> mais la taille est a zero" << std::endl << std::endl;
 
