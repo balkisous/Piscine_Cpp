@@ -6,11 +6,12 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/19 11:26:55 by bben-yaa          #+#    #+#              #
-#    Updated: 2022/04/02 12:36:54 by bben-yaa         ###   ########.fr        #
+#    Updated: 2022/04/04 14:42:39 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS 	=	main.cpp \
+			Span.cpp
 
 EXEC	= exec
 
