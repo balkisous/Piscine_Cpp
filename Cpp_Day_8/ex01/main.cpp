@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:31:39 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/04/04 16:19:03 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/04/04 17:20:03 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,31 @@ int main (void)
 	std::cout << std::endl << "---Empty Span---" << std::endl;	
 	emptySpan.display();
 
+	std::cout << std::endl << "----Main Subject----" << std::endl;
+
+	Span sp = Span(5);
+
+	sp.addNumber(6);
+	sp.addNumber(3);
+	sp.addNumber(17);
+	sp.addNumber(9);
+	sp.addNumber(11);
+
+	std::cout << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
+
+/*
+	std::cout << std::endl << "---Another test haha---" << std::endl;
+	Span sp2 = Span(10000);
+	std::cout << "We just created a span with N = 1000" << std::endl;
+	std::cout << "-------------------------------" << std::endl;
+	std::cout << "Let's add the numbers (in one function call)!" << std::endl;
+	sp2.SpanRangeIt(0, 9999);
+	std::cout << "-------------------------------" << std::endl;
+	std::cout << "Let's display the span" << std::endl;
+	sp2.display();
+	std::cout << "-------------------------------" << std::endl;
+
+*/
 	return (0);
 }

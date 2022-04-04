@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:42:07 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/04/04 15:18:11 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/04/04 16:54:38 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
+#include <algorithm>
 
 class	Span
 {
@@ -33,6 +34,7 @@ class	Span
 			void			addNumber(int n);
 			int				shortestSpan(void);
 			int				longestSpan(void);
+			void			SpanRangeIt(int a, int b);
 			void			display(void) const;
 
 			
@@ -50,7 +52,7 @@ class	Span
 			{
 				virtual const char * what() const throw()
 				{
-					return ("This Span no numbers stored");
+					return ("This Span no numbers stored, no distance can be found");
 				}
 			};
 

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:43:38 by bben-yaa          #+#    #+#             */
-/*   Updated: 2022/04/04 16:20:24 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2022/04/04 17:40:35 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,17 +65,21 @@ void	Span::addNumber(int n)
 
 int		Span::shortestSpan(void)
 {
-	int		tmp;
-	std::vector<int>::const_iterator	it = this->vec.begin();
-
-	if (this->vec.size() == 0)
+	std::vector<int>::const_iterator	it;
+	std::vector<int>::const_iterator	jt;
+	long	tmp;
+	
+	if (this->vec.size() < 2)
 		throw Span::NotFound();
-	tmp = (int)(*it);
-	while (it != this->vec.end())
+	sort(this->vec.begin(), this->vec.end());
+	tmp = std::abs(this->vec[0] - this->vec[1]);
+	for (it = this->vec.begin(); it != this->vec.end(); it++)
 	{
-		if (*it < tmp)
-			tmp = *it;
-		it++;
+		for (jt = it + 1; jt != this->vec.end(); jt++)
+		{
+			if (tmp > static_cast<long>(abs(*it - *jt)))
+				tmp = static_cast<long>(abs(*it - *jt));
+		}
 	}
 	return(tmp);
 }
@@ -83,18 +87,24 @@ int		Span::shortestSpan(void)
 int		Span::longestSpan(void)
 {
 	int		tmp;
-	std::vector<int>::const_iterator	it = this->vec.begin();
 
-	if (this->vec.size() == 0)
+	if (this->vec.size() < 2)
 		throw Span::NotFound();
-	tmp = (int)(*it);
-	while (it != this->vec.end())
-	{
-		if (*it > tmp)
-			tmp = *it;
-		it++;
-	}
+	tmp = *std::max_element(this->vec.begin(), this->vec.end()) - *std::min_element(this->vec.begin(), this->vec.end());
+	// https://www.cplusplus.com/reference/algorithm/min_element/
 	return(tmp);
+}
+
+void	Span::SpanRangeIt(int a, int b)
+{
+	// a is the beginning
+	// b is the ending
+	unsigned int						to_range = b - a;
+
+	if (to_range >= this->size)
+		throw Span::NotFound();
+	for (int i = a; i <= b; i++)
+		this->vec.push_back(i);
 }
 
 
